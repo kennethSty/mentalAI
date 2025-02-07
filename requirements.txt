@@ -4,3 +4,4 @@ transformers
 torch
 numpy
 debugpy
+datasets

@@ -1,0 +1,8 @@
+Date: 07.02.2025
+
+As of now Docker does not support GPU acceleration for Apple Silicon.
+Therefore, the Docker setup is only relevant for non Mac users.
+
+To keep environments consistent across the team, please only install
+packages within requirements.txt. If you need an additional package, please insert it into
+the requirements.txt file.

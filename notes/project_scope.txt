@@ -1,0 +1,4 @@
+Details on the architecture and the implementation plan
+including the scope of all milestones can be found here:
+https://miro.com/welcomeonboard/RDdqcFpOejdEa1ZHM2FtaGFEdXNFeE54L0FmcmRLbEh0eS82cjZ0a3Z4Znl6bkg3ZXhiR1VZb2I5WC85V2txTDNTdjExOUpVZjBKWHZCU25sUXprZFBlbEdnVE5CUmdiSlo2amQ4QTRSaFkwbnhBKzFBZ3dmUjF0R0RGRUdibzZBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=938676093020
+Author: Kenneth Styppa
