@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: mentalAI_image
+    volumes:
+      - ./src:/src
+    ports:
+      - "80:80"
+      - "5678:5678"
+    command: python src/main.py
+    working_dir: /code
+    volumes:
+      - .:/code
