@@ -3,7 +3,7 @@ from time import time
 from typing import List
 
 from src.utils.csv_utils import CSVUtils
-from src._1_chroma_preparation.embed_utils import PubMedBert
+from src._1_chroma_preparation.embed_utils import PubMedBert, MiniLML6
 from src._1_chroma_preparation.row_read_utils import Document
 from src.utils.gpu_utils import DeviceManager
 
@@ -103,13 +103,20 @@ class Embedder:
 
 def main():
     device = DeviceManager().get_device()
-    embedding_model = PubMedBert(device=device)
-    embedder = Embedder(
-        model = embedding_model,
+    pubmed_emb_model = PubMedBert(device=device)
+    counsel_emb_model = MiniLML6(device=device)
+    pubmed_embedder = Embedder(
+        model = pubmed_emb_model,
         input_doc_path = "../../data/pubmed_abstracts.csv",
         output_emb_path = "../../data/embedded_abstracts.csv"
     )
-    embedder.create_embeddings()
+    counsel_embedder = Embedder(
+        model = counsel_emb_model,
+        input_doc_path = "../../data/pubmed_abstracts.csv",
+        output_emb_path = "../../data/embedded_abstracts.csv"
+    )
+    pubmed_embedder.create_embeddings()
+
 
 if __name__ == "__main__":
     main()

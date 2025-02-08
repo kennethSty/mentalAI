@@ -1,0 +1,20 @@
+# pair_data.csv:
+A dataset consisting of brief interactions between counselors and clients portraying different levels of reflective listening skills. Each interaction is in English and includes a client prompt, i.e., a client's statement that is usually given to the counseling trainee, paired with counseling responses portraying different levels of reflections skill, i.e., low quality, medium quality, and high quality. We build the dataset using both expert and crowd-sourced annotators and also leverage conversational data from an MI dataset to obtain additional prompt-response pairs from conversations snippets containing reflections. (
+PAIR: Prompt-Aware margIn Ranking for Counselor Reflection Scoring in Motivational Interviewing (pdf, data, abstract, BibTeX)
+Do June Min, Verónica Pérez-Rosas, Kenneth Resnicow, and Rada Mihalcea
+EMNLP 2022
+
+# synthetic_conversations.csv
+Synthetic therapy sessions
+Retrieved from: https://huggingface.co/datasets/jerryjalapeno/nart-100k-synthetic?row=42
+
+# pubmed_abstracts.csv
+Abstracts matching the term "mental health" retrieved from PubMed.
+
+# counsel_chat.csv
+Original question answer pairs from counsel chat.
+Retrieved from: https://huggingface.co/datasets/nbertagnolli/counsel-chat
+
+# facebook_empathy_conv.csv
+Emotional conversations.
+Retrieved from: https://www.kaggle.com/datasets/atharvjairath/empathetic-dialogues-facebook-ai
