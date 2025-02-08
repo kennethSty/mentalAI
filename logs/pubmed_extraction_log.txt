@@ -1,0 +1,4 @@
+2025-02-08 11:15:21,697 [INFO] - ------- Beginning to extract PubMed abstracts --------
+2025-02-08 11:15:21,697 [INFO] - Start date: 2019/01/01
+2025-02-08 11:15:21,697 [INFO] - End date: 2025/01/01
+2025-02-08 11:15:21,697 [INFO] - Query term: mental health

@@ -5,3 +5,6 @@ torch
 numpy
 debugpy
 datasets
+Bio
+sentence_transformers
+langchain_community
