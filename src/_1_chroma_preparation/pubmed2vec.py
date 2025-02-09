@@ -112,10 +112,11 @@ def main():
     )
     counsel_embedder = Embedder(
         model = counsel_emb_model,
-        input_doc_path ="../../data/02_merged/train/pubmed_abstracts.csv",
-        output_emb_path ="../../data/03_embedded/embedded_abstracts.csv"
+        input_doc_path ="file_to_merged_counseldata",
+        output_emb_path ="file_to_embedded_counseldata"
     )
     pubmed_embedder.create_embeddings()
+    counsel_embedder.create_embeddings()
 
 
 if __name__ == "__main__":
