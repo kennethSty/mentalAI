@@ -107,13 +107,13 @@ def main():
     counsel_emb_model = MiniLML6(device=device)
     pubmed_embedder = Embedder(
         model = pubmed_emb_model,
-        input_doc_path = "../../data/pubmed_abstracts.csv",
-        output_emb_path = "../../data/embedded_abstracts.csv"
+        input_doc_path ="../../data/02_merged/train/pubmed_abstracts.csv",
+        output_emb_path ="../../data/03_embedded/embedded_abstracts.csv"
     )
     counsel_embedder = Embedder(
         model = counsel_emb_model,
-        input_doc_path = "../../data/pubmed_abstracts.csv",
-        output_emb_path = "../../data/embedded_abstracts.csv"
+        input_doc_path ="../../data/02_merged/train/pubmed_abstracts.csv",
+        output_emb_path ="../../data/03_embedded/embedded_abstracts.csv"
     )
     pubmed_embedder.create_embeddings()
 

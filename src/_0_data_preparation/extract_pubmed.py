@@ -13,8 +13,8 @@ class DataExtractor:
     def __init__(self, query_term = "mental health",
                 window_duration_days = 7,
                 chunk_size = 100,
-                start_date = '2019/01/01',
-                end_date = '2025/01/01',
+                start_date = '2020/01/01',
+                end_date = '2022/01/01',
                 save_path = "../../data/pubmed_abstracts.csv",
                 log_path = "../../logs/pubmed_extraction_log.txt"):
         
@@ -228,8 +228,8 @@ class DataExtractor:
 
 def main():
     extractor = DataExtractor()
-    studies = extractor.extract()
-    studies.to_csv("data/studies.csv", encoding="utf-8", index=False)
+    extractor.extract()
+
     
 if __name__ == "__main__":
     main()

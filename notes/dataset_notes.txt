@@ -15,6 +15,18 @@ Abstracts matching the term "mental health" retrieved from PubMed.
 Original question answer pairs from counsel chat.
 Retrieved from: https://huggingface.co/datasets/nbertagnolli/counsel-chat
 
+# mental_health_conv.csv
+This dataset is a collection of questions and answers sourced from two online counseling and therapy platforms. The questions cover a wide range of mental health topics, and the answers are provided by qualified psychologists. The dataset is intended to be used for fine-tuning language models to improve their ability to provide mental health advice.
+Retrieved from: https://huggingface.co/datasets/Amod/mental_health_counseling_conversations?row=0
+
+# mental_faq.csv
+This dataset contains conversational pair of questions and answers in a single text related to Mental Health. Dataset was curated from popular healthcare blogs like WebMD, Mayo Clinic and HeatlhLine, online FAQs etc. All questions and answers have been anonymized to remove any PII data and pre-processed to remove any unwanted characters.
+Retrieved from: https://huggingface.co/datasets/heliosbrahma/mental_health_chatbot_dataset?row=16
+
+# intents.json
+A dataset structured by intents and corresponding professional answers.
+Retrieved from: https://www.kaggle.com/code/jocelyndumlao/chatbot-for-mental-health-conversations
+
 # facebook_empathy_conv.csv
 Emotional conversations.
 Retrieved from: https://www.kaggle.com/datasets/atharvjairath/empathetic-dialogues-facebook-ai
