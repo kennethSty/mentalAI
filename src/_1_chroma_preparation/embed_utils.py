@@ -25,7 +25,6 @@ class PubMedBert(EmbedModelWrapper):
     """ PubMedBert Embedding Model """
     def __init__(self, device):
         super().__init__(
-            self,
             device = device,
             model = SentenceTransformer(
             "pritamdeka/S-PubMedBert-MS-MARCO", device=device

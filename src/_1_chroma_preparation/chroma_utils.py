@@ -1,4 +1,4 @@
-from langchain_community.vectorstores.chroma import Chroma
+from langchain_chroma import Chroma
 import chromadb
 
 from src._1_chroma_preparation.embed_utils import EmbedModelWrapper, EmbeddingFunction

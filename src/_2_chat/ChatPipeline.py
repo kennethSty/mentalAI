@@ -11,20 +11,43 @@ from src._1_chroma_preparation.chroma_utils import ChromaCollectionManager
 class ChatPipeline:
     def __init__(
             self,
+            top_k: int,
             model_path: str,
             chroma_path: str,
             collection_embed_dict: Dict[str, EmbeddingFunction],
-            prompt_template: PromptTemplate
+            prompt: PromptTemplate,
     ):
+        self.top_k = top_k
         self.model = self.__init_llm(model_path=model_path)
-        self.chain =  LLMChain(prompt=prompt_template, llm=self.model)
+        self.chain =  prompt | self.model
         self.collection_dict = self.__init_collections(
             chroma_path=chroma_path,
             collection_embed_dict=collection_embed_dict
         )
 
+    def get_answer(self, question: str):
+        top_pubmed_docs = self.collection_dict["pubmed_collection"]\
+            .max_marginal_relevance_search(question, k=self.top_k)
+        top_conv_docs = self.collection_dict["conv_collection"]\
+            .max_marginal_relevance_search(question, k=self.top_k)
 
-    def __init_collections(self, chroma_path: str, collection_embed_dict):
+        top_k_abstracts = [doc.page_content for doc in top_pubmed_docs]
+        top_k_conversations = [doc.page_content for doc in top_conv_docs]
+
+        top_k_abstracts = "\n\n".join(top_k_abstracts)
+        top_k_conversations = "\n\n".join(top_k_conversations)
+
+        answer = self.chain.invoke({
+                "top_k_abstracts": top_k_abstracts,
+                "top_k_conversations": top_k_conversations,
+                "user_query": question
+        })
+        return answer
+
+    def __init_collections(
+            self,
+            chroma_path: str,
+            collection_embed_dict):
         collection_manager = ChromaCollectionManager(chroma_path)
         collection_dict = {
             collection_name:
@@ -36,6 +59,7 @@ class ChatPipeline:
         return collection_dict
 
     def __init_llm(
+            self,
             model_path: str,
             temperature=0.3,
             max_tokens=1000,
