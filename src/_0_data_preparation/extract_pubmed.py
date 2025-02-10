@@ -6,6 +6,12 @@ import io
 import csv
 import random
 import logging
+import sys
+import os
+
+# Ensures when running the script from terminal src module is detected
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
 
 from src.utils.csv_utils import CSVUtils
 
@@ -13,7 +19,7 @@ class DataExtractor:
     def __init__(self, query_term = "mental health",
                 window_duration_days = 7,
                 chunk_size = 100,
-                start_date = '2020/01/01',
+                start_date = '2021/01/01',
                 end_date = '2022/01/01',
                 save_path = "../../data/pubmed_abstracts.csv",
                 log_path = "../../logs/pubmed_extraction_log.txt"):

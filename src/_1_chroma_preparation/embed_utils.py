@@ -28,7 +28,7 @@ class PubMedBert(EmbedModelWrapper):
             self,
             device = device,
             model = SentenceTransformer(
-            "pritamdeka/S-PubMedBert-MS-MARCO", device=self.device
+            "pritamdeka/S-PubMedBert-MS-MARCO", device=device
             ),
             max_seq_length = 512
         )
@@ -37,12 +37,11 @@ class MiniLML6(EmbedModelWrapper):
     """ MiniLML6 Embedding Model """
     def __init__(self, device):
         super().__init__(
-            self,
-            device = device,
-            model = SentenceTransformer(
-            "sentence-transformers/all-MiniLM-L6-v2", device=self.device
+            device=device,
+            model=SentenceTransformer(
+            "sentence-transformers/all-MiniLM-L6-v2", device=device
             ),
-            max_seq_length = None
+            max_seq_length=None
         )
 
 class EmbeddingFunction(chromadb.EmbeddingFunction):
