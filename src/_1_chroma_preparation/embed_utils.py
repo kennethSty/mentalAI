@@ -54,29 +54,3 @@ class EmbeddingFunction(chromadb.EmbeddingFunction):
 
     def embed_query(self, query):
         return self.model.encode(query)
-
-class ChromaDBManager:
-    """Manages ChromaDB initialization and operations"""
-    def __init__(self, model: EmbedModelWrapper, device: str, persist_dir: str, collection_name: str):
-        """
-        Initializes ChromaDB with embeddings.
-        :param device: The device for PubMedBert (e.g., 'cpu' or 'cuda').
-        :param persist_dir: Directory to persist ChromaDB storage.
-        """
-        self.device = device
-        self.model = model
-        self.embed_fn = EmbeddingFunction(self.model)
-        self.client = chromadb.PersistentClient(path=persist_dir)
-        self.collection_name = collection_name
-
-    def get_chroma_collection(self) -> Chroma:
-        """
-        Returns the ChromaDB collection for managing embeddings.
-        :return: Chroma collection object.
-        """
-        return Chroma(
-            client=self.client,
-            collection_name=self.collection_name,
-            embedding_function=self.embed_fn,
-            collection_metadata={"hnsw:space": "cosine"},
-        )
