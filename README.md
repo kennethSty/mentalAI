@@ -1,4 +1,4 @@
-# MentalAI (Work in progress)
+# MentalAI (work in progress)
 
 MentalAI is a retrieval-augmented system for mental health support with fine-tuned suicide prediction. It leverages **llama.cpp** and **LangChain** to provide AI-assisted conversations based on retrieved contextual information.
 
