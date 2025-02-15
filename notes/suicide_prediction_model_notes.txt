@@ -1,0 +1,15 @@
+### Models to compare
+
+# PsychBERT
+pretrained from the bert-base-cased checkpoint on masked language modeling, using a dataset of ~40,000 PubMed papers in the domain of psychology, psychiatry, mental health, and behavioral health;
+as well as a dastaset of roughly 200,000 social media conversations about mental health.
+
+# EmoRoBERTa
+RoBERTa model finetuned for emotionclassification on GoEmotions.
+
+# GPT2 Mini
+Using published OpenAI weights and loaded into reverse engineered gpt2 architecture using content
+from book of Sebastian Raschka
+
+# GPT2 Medium or Llama3 with LoRA Finetuning
+Reverse engineer GPT2, load in the pretrained weights and finetune it with LoRA

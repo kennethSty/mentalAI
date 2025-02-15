@@ -19,8 +19,8 @@ class DataExtractor:
     def __init__(self, query_term = "mental health",
                 window_duration_days = 7,
                 chunk_size = 100,
-                start_date = '2021/01/01',
-                end_date = '2022/01/01',
+                start_date = '2024/01/01',
+                end_date = '2025/01/01',
                 save_path = "../../data/pubmed_abstracts.csv",
                 log_path = "../../logs/pubmed_extraction_log.txt"):
         

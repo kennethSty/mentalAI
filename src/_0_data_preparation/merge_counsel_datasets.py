@@ -13,8 +13,8 @@ def merge_counsel_datasets(paths_to_human_datasets: List[str], paths_to_syntheti
 
     train_df = pd.concat([human_train_df, synthetic_train_df])
     test_df = pd.concat([human_test_df, synthetic_test_df])
-    train_df.to_csv("../../data/02_merged/train/counsel_conversations_train.csv", index=False)
-    test_df.to_csv("../../data/02_merged/test/counsel_conversations_test.csv", index=False)
+    train_df.to_csv("../../data/02_train_test_splits/train/counsel_conversations_train.csv", index=False)
+    test_df.to_csv("../../data/02_train_test_splits/test/counsel_conversations_test.csv", index=False)
 
 if __name__ == "__main__":
 
