@@ -10,3 +10,4 @@ sentence_transformers
 langchain_community
 langchain-chroma
 tiktoken
+tensorflow

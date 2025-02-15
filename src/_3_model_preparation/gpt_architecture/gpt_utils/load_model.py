@@ -1,20 +1,14 @@
-from finetuning.gpt_download import download_and_load_gpt2
-from gpt_architecture.config import GPT_CONFIG_124M
-from gpt_architecture.GPTModel import  GPTModel
+from src._3_model_preparation.gpt_architecture.GPTModel import  GPTModel
 
 import torch
-from typing import Dict
 import numpy as np
-
 
 def assign(left, right):
     if left.shape != right.shape:
         raise ValueError(f"Shape mismatch. Left: {left.shape}, Right: {right.shape}")
     return torch.nn.Parameter(torch.tensor(right, dtype=torch.float32))
 
-import numpy as np
-
-def load_weights_into_gpt(gpt, params):
+def load_weights_into_gpt(gpt: GPTModel, params):
     gpt.pos_embed_layer.weight = assign(gpt.pos_embed_layer.weight, params['wpe'])
     gpt.token_embed_layer.weight = assign(gpt.token_embed_layer.weight, params['wte'])
     
@@ -73,7 +67,6 @@ def load_weights_into_gpt(gpt, params):
     gpt.layer_norm.scale = assign(gpt.layer_norm.scale, params["g"])
     gpt.layer_norm.shift = assign(gpt.layer_norm.shift, params["b"])
     gpt.out_layer.weight = assign(gpt.out_layer.weight, params["wte"])
-                
 
     return gpt                        
         

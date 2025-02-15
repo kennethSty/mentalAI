@@ -1,4 +1,4 @@
-from SuicideDataset import SuicideDataset
+from src._0_data_preparation.SuicideDataset import SuicideDataset
 
 from torch.utils.data import DataLoader
 import tiktoken
@@ -39,7 +39,7 @@ def get_suicide_dataloaders(
         dataset=test_dataset,
         batch_size=batch_size,
         num_workers=num_workers,
-        shuffle=False, #because IterableDataset does not support shuffling
+        shuffle=False,
         drop_last=False
     )
 
@@ -47,9 +47,11 @@ def get_suicide_dataloaders(
         dataset=val_dataset,
         batch_size=batch_size,
         num_workers=num_workers,
-        shuffle=False, #because IterableDataset does not support shuffling
+        shuffle=False,
         drop_last=False
     )
+
+    print("Loaded finetuning datasets")
 
     return train_loader, test_loader, val_loader
 

@@ -1,6 +1,6 @@
-from LayerNorm import LayerNorm
-from ParMultiHeadAttention import ParMultiHeadAttention
-from FeedForward import FeedForward
+from src._3_model_preparation.gpt_architecture.LayerNorm import LayerNorm
+from src._3_model_preparation.gpt_architecture.ParMultiHeadAttention import ParMultiHeadAttention
+from src._3_model_preparation.gpt_architecture.FeedForward import FeedForward
 
 import torch.nn as nn
 from typing import Dict

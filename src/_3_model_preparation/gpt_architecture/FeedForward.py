@@ -1,4 +1,4 @@
-from GeLU import GeLU
+from src._3_model_preparation.gpt_architecture.GeLU import GeLU
 
 import torch.nn as nn
 from typing import Dict

@@ -1,6 +1,5 @@
-from config import GPT_CONFIG_124M
-from TransformerBlock import TransformerBlock
-from LayerNorm import LayerNorm
+from src._3_model_preparation.gpt_architecture.TransformerBlock import TransformerBlock
+from src._3_model_preparation.gpt_architecture.LayerNorm import LayerNorm
 
 import torch
 import torch.nn as nn
@@ -10,7 +9,6 @@ from typing import Dict
 class GPTModel(nn.Module):
     def __init__(self, config: Dict):
         super().__init__()
-
         self.token_embed_layer = nn.Embedding(config["vocab_size"], config["emb_dim"])
         self.pos_embed_layer = nn.Embedding(config["context_length"], config["emb_dim"])
         self.dropout_layer = nn.Dropout(config["drop_rate"])
