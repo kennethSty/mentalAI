@@ -2,25 +2,27 @@ import pandas as pd
 from pathlib import Path
 import csv
 from typing import Dict, List
-import tiktoken
+from src.utils.paths_utils import check_and_create_directories
+from src._0_data_preparation.Tokenizer import Tokenizer
+from src.config import SUICIDE_DS_CONFIG, TOKENIZER_CONFIG
 
 def create_suicide_datasets(raw_data_path: str,
+                            tokenizer,
                             encoded_data_path: str,
                             train_ds_path: str,
                             val_ds_path: str,
                             test_ds_path: str):
     """ Encodes, padds and splits the suicide dataset """
-    tokenizer = tiktoken.get_encoding("gpt2")
     encode_clean_texts(raw_data_path=raw_data_path, encoded_data_path=encoded_data_path, tokenizer=tokenizer)
     df = pd.read_csv(filepath_or_buffer=encoded_data_path)
-    train_df, validation_df, test_df = random_split(df, train_frac=0.75, val_frac=0.1)
+    train_df, validation_df, test_df = random_split(df, train_frac=SUICIDE_DS_CONFIG["train_frac"], val_frac=SUICIDE_DS_CONFIG["val_frac"])
     train_df.to_csv(train_ds_path, index=None)
     validation_df.to_csv(val_ds_path, index=None)
     test_df.to_csv(test_ds_path, index=None)
     print("saved train, validation and text data")
 
 
-def encode_clean_texts(raw_data_path:str, encoded_data_path:str, tokenizer: tiktoken.Encoding, batch_size=50):
+def encode_clean_texts(raw_data_path:str, encoded_data_path:str, tokenizer: Tokenizer, batch_size=50):
     with open(raw_data_path, "r") as input_csv,\
         open(encoded_data_path, "w") as output_csv:
         reader = csv.DictReader(input_csv)
@@ -59,10 +61,10 @@ def encode_clean_texts(raw_data_path:str, encoded_data_path:str, tokenizer: tikt
         print("Successfully encoded texts")
         print("Maximum encoded tokens per text: ", max_encoding_length)
 
-def clean_text(row: Dict[str, str], encoded_texts: List, labels: List, tokenizer: tiktoken.Encoding, max_encoding_length: int):
-    if (len(row["text"]) > 0) and (len(row["class"]) > 0):
+def clean_text(row: Dict[str, str], encoded_texts: List, labels: List, tokenizer: Tokenizer, max_encoding_length: int):
+    if (len(row["text"]) > 0) and (len(row["class"]) > 0): #both fields not empty
         encoded_text = tokenizer.encode(row["text"])
-        if (len(encoded_text) < 500): #based on suicide_token_count_hist.png
+        if (len(encoded_text) <= SUICIDE_DS_CONFIG["max_token_length"]): #based on suicide_token_count_hist.png
             if len(encoded_text) > max_encoding_length:
                 max_encoding_length = len(encoded_text)
             label = 1 if (row["class"].strip()=="suicide") else 0
@@ -85,12 +87,19 @@ def random_split(df: pd.DataFrame, train_frac: float, val_frac: float):
     return train_df, validation_df, test_df
 
 if __name__ == "__main__":
-    raw_data_path = Path("../../data/00_raw/suicide_detection.csv")
-    encoded_data_path = Path("../../data/01_preprocessed/gpt2_encoded_suicide_detection.csv")
-    train_ds_path = Path("../../data/02_train_test_splits/train/gpt2_suicide_train.csv")
-    val_ds_path =  Path("../../data/02_train_test_splits/train/gpt2_suicide_val.csv")
-    test_ds_path = Path("../../data/02_train_test_splits/test/gpt2_suicide_test.csv")
+    model_flag = "psychbert" #or gpt2
+    raw_data_path = Path(f"../../data/00_raw/suicide_detection.csv")
+    encoded_data_path = Path(f"../../data/01_preprocessed/{model_flag}/{model_flag}_encoded_suicide_detection.csv")
+    train_ds_path = Path(f"../../data/02_train_test_splits/train/{model_flag}/{model_flag}_suicide_train.csv")
+    val_ds_path =  Path(f"../../data/02_train_test_splits/train/{model_flag}/{model_flag}_suicide_val.csv")
+    test_ds_path = Path(f"../../data/02_train_test_splits/test/{model_flag}/{model_flag}_suicide_test.csv")
+    paths = [encoded_data_path, train_ds_path, val_ds_path, test_ds_path]
+    check_and_create_directories(paths)
+
+    tokenizer = TOKENIZER_CONFIG[model_flag]
+
     create_suicide_datasets(raw_data_path=raw_data_path,
+                            tokenizer=tokenizer,
                             encoded_data_path=encoded_data_path,
                             train_ds_path=train_ds_path,
                             val_ds_path=val_ds_path,

@@ -1,11 +1,10 @@
 from torch.utils.data import DataLoader
 import torch
-
-from src._3_model_preparation.gpt_architecture.GPTModel import GPTModel
 import os
+import torch.nn as nn
 
 def save_checkpoint(model, optimizer, epoch, global_step, train_losses, val_losses,
-                    train_accs, val_accs, checkpoint_dir='../../gpt2_checkpoints'):
+                    train_accs, val_accs, checkpoint_dir):
 
     os.makedirs(checkpoint_dir, exist_ok=True)
 
@@ -39,7 +38,7 @@ def load_checkpoint(model, optimizer, checkpoint_path):
     print(f"Checkpoint loaded from {checkpoint_path}")
     return epoch, global_step, train_losses, val_losses, train_accs, val_accs
 
-def finetune_loop(model: GPTModel, train_loader: DataLoader,
+def finetune_loop(model: nn.Module, train_loader: DataLoader,
                   val_loader: DataLoader, optimizer: torch.optim.Optimizer,
                   device: str, num_epochs: int, eval_freq: int, checkpoint_freq: int, eval_iter: int, checkpoint_dir='../../../gpt2_checkpoints'):
 
@@ -62,8 +61,11 @@ def finetune_loop(model: GPTModel, train_loader: DataLoader,
             print("Done learning steps: ", global_step)
 
             if global_step % eval_freq == 0:
-                train_loss, val_loss = evaluate_model(
-                    model, train_loader, val_loader, device, eval_iter
+                train_loss = evaluate_model_loss(
+                    model, train_loader, device, eval_iter
+                )
+                val_loss = evaluate_model_loss(
+                    model, val_loader, device, eval_iter
                 )
                 train_losses.append(train_loss)
                 val_losses.append(val_loss) 
@@ -71,11 +73,11 @@ def finetune_loop(model: GPTModel, train_loader: DataLoader,
                 print(f"Train loss {train_loss:.3f}")
                 print(f"Val loss {val_loss:.3f}")
                 print(f"Saving checkpoint")
-                train_accuracy = calc_accuracy_loader(
-                    train_loader, model, device, num_batches=eval_iter
+                train_accuracy = evaluate_model_acc(
+                    data_loader=train_loader, model=model, device=device, num_batches=eval_iter
                 )
-                val_accuracy = calc_accuracy_loader(
-                    val_loader, model, device, num_batches=eval_iter
+                val_accuracy = evaluate_model_acc(
+                    data_loader=val_loader, model=model, device=device, num_batches=eval_iter
                 )
                 print(f"Training accuracy: {train_accuracy * 100:.2f}%")
                 print(f"Val accuracy: {val_accuracy * 100:.2f}%")
@@ -88,20 +90,8 @@ def finetune_loop(model: GPTModel, train_loader: DataLoader,
     return train_losses, val_losses, train_accs, val_accs, examples_seen
 
 
-def evaluate_model(model: GPTModel, train_loader: DataLoader, val_loader: DataLoader, device: str, eval_iter: int):
-    model.eval()
-    with torch.inference_mode():
-        train_loss = calc_loss_loader(
-            train_loader, model, device, num_batches = eval_iter
-        )
-        val_loss = calc_loss_loader(
-            val_loader, model, device, num_batches = eval_iter
-        )
-    model.train()
-    return train_loss, val_loss
 
-
-def calc_accuracy_loader(data_loader: DataLoader, model: GPTModel, device: str, num_batches = None):
+def calc_accuracy_loader(data_loader: DataLoader, model: nn.Module, device: str, num_batches = None):
 
     model.eval()
     correct_predictions, num_examples = 0,0
@@ -114,22 +104,22 @@ def calc_accuracy_loader(data_loader: DataLoader, model: GPTModel, device: str, 
 
         #take logit of last token because the last token has attn scores to all other tokens
         with torch.inference_mode():
-            logits = model(input_batch)[:, -1, :]
+            logits = model(input_batch)
         pred_labels = torch.argmax(logits, dim=-1)
         num_examples += pred_labels.shape[0]
         correct_predictions += (pred_labels == target_batch).sum().item()
 
     return correct_predictions / num_examples 
 
-def calc_loss_batch(input_batch: torch.Tensor, target_batch: torch.Tensor, model: GPTModel, device: str):
+def calc_loss_batch(input_batch: torch.Tensor, target_batch: torch.Tensor, model: nn.Module, device: str):
     #batch_size, n_tokens = input_batch.shape
     input_batch = input_batch.to(device)
     target_batch = target_batch.to(device)            
-    logits = model(input_batch)[:, -1, :] #take logits of last token
+    logits = model(input_batch) #is logits of last token
     loss = torch.nn.functional.cross_entropy(logits, target_batch)
     return loss
 
-def calc_loss_loader(data_loader: DataLoader, model: GPTModel, device: str, num_batches = None):
+def calc_loss_loader(data_loader: DataLoader, model: nn.Module, device: str, num_batches = None):
     total_loss = 0
 
     for i, (input_batch, target_batch) in enumerate(data_loader):
@@ -142,3 +132,30 @@ def calc_loss_loader(data_loader: DataLoader, model: GPTModel, device: str, num_
         total_loss += loss.item()
 
     return total_loss / num_batches
+
+def assess_pretrain_accuracy(model: nn.Module, dataloader: DataLoader, device: str, label: str):
+    model.eval()
+    with torch.inference_mode():
+        accuracy = calc_accuracy_loader(
+            dataloader, model, device, num_batches=4
+        )
+    print(f"{label}-accuracy before training:", accuracy)
+    model.train()
+    return
+
+def evaluate_model_loss(model: nn.Module, data_loader: DataLoader, device: str, num_batches: int):
+    model.eval()
+    with torch.inference_mode():
+        accuracy = calc_loss_loader(
+            data_loader, model, device, num_batches = num_batches
+        )
+    return accuracy
+
+def evaluate_model_acc(model: nn.Module, data_loader: DataLoader, device: str, num_batches: int):
+    model.eval()
+    with torch.inference_mode():
+        accuracy = calc_accuracy_loader(
+            data_loader, model, device, num_batches = num_batches
+        )
+    return accuracy
+

@@ -3,11 +3,15 @@ from src._0_data_preparation.SuicideStreamDataset import SuicideDataset, Suicide
 from torch.utils.data import DataLoader
 import tiktoken
 from pathlib import Path
-import os
+
+from src._0_data_preparation.Tokenizer import Tokenizer
+from src.config import TOKENIZER_CONFIG, FINETUNE_CONFIG
+from src.utils.paths_utils import check_and_create_directories
+
 
 def get_suicide_dataloaders(
         batch_size: int,
-        tokenizer: tiktoken.Encoding,
+        tokenizer: Tokenizer,
         train_ds_path=None,
         test_ds_path=None,
         val_ds_path=None):
@@ -28,6 +32,7 @@ def get_suicide_dataloaders(
             drop_last=True
         )
     if test_ds_path is not None:
+        #the test set is small enough for a regular dataset
         test_dataset = SuicideDataset(
             csv_file_path=test_ds_path,
             tokenizer=tokenizer
@@ -60,15 +65,19 @@ def get_suicide_dataloaders(
 
 # Test the loading
 if __name__ == "__main__":
-    tokenizer = tiktoken.get_encoding("gpt2")
-    batch_size = 8
-    train_ds_path = Path("../../data/02_train_test_splits/train/suicide_train.csv")
-    val_ds_path =  Path("../../data/02_train_test_splits/train/suicide_val.csv")
-    test_ds_path = Path("../../data/02_train_test_splits/test/suicide_test.csv")
+
+    model_flag = "psychbert"
+    tokenizer = TOKENIZER_CONFIG[model_flag]
+
+    train_ds_path = Path(f"../../data/02_train_test_splits/train/{model_flag}/{model_flag}_suicide_train.csv")
+    val_ds_path =  Path(f"../../data/02_train_test_splits/train/{model_flag}/{model_flag}_suicide_val.csv")
+    test_ds_path = Path(f"../../data/02_train_test_splits/test/{model_flag}/{model_flag}_suicide_test.csv")
+    paths = [train_ds_path, val_ds_path, test_ds_path]
+    check_and_create_directories(paths)
 
     train_loader, test_loader, val_loader = get_suicide_dataloaders(
         tokenizer=tokenizer,
-        batch_size=batch_size,
+        batch_size=FINETUNE_CONFIG["batch_size"],
         train_ds_path=train_ds_path,
         val_ds_path=val_ds_path,
         test_ds_path=test_ds_path,
