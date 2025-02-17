@@ -1,0 +1,7 @@
+/Users/Kenneth/miniforge3/envs/mentalAI/bin/python /Users/Kenneth/PycharmProjects/mentalAI/src/_5_model_evaluation/finetuning_evaluation.py
+using device:  mps
+Loaded finetuning datasets
+0.9725
+Test accuracy on 800 instances: 97.25%
+
+Process finished with exit code 0

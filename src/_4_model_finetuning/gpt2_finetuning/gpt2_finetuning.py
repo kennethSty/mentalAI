@@ -51,6 +51,7 @@ def finetune_classification_head(is_test = False):
 
     # Initialize model
     device = "mps" if torch.mps.is_available() else "cpu"
+    print('using device: ', device)
     model = GPTModel(BASE_CONFIG)
     tokenizer = tiktoken.get_encoding("gpt2")
 
@@ -70,7 +71,7 @@ def finetune_classification_head(is_test = False):
     model.to(device)
 
     train_loader, test_loader, val_loader = get_suicide_dataloaders(
-        batch_size=16,
+        batch_size=8,
         tokenizer=tokenizer,
         train_ds_path=train_ds_path,
         test_ds_path=test_ds_path,
@@ -95,8 +96,9 @@ def finetune_classification_head(is_test = False):
         optimizer=optimizer,
         device=device,
         num_epochs=1,
-        eval_checkpoint_freq=100,
-        eval_iter=10
+        eval_freq=100,
+        checkpoint_freq=100,
+        eval_iter=4
     )
 
     losses_data = {
@@ -123,7 +125,7 @@ def assess_pretrain_accuracy(model: GPTModel, dataloader: DataLoader, device: st
     model.eval()
     with torch.inference_mode():
         accuracy = calc_accuracy_loader(
-            dataloader, model, device, num_batches=5
+            dataloader, model, device, num_batches=4
         )
     print(f"{label}-accuracy before training:", accuracy)
     model.train()
@@ -140,4 +142,4 @@ def check_and_create_directories(paths_to_check: List):
 
 
 if __name__ == "__main__":
-    finetune_classification_head()
+    finetune_classification_head(is_test=True)

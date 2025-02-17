@@ -5,7 +5,7 @@ from src._3_model_preparation.gpt_architecture.GPTModel import GPTModel
 import os
 
 def save_checkpoint(model, optimizer, epoch, global_step, train_losses, val_losses,
-                    train_accs, val_accs, checkpoint_dir='../../checkpoints'):
+                    train_accs, val_accs, checkpoint_dir='../../gpt2_checkpoints'):
 
     os.makedirs(checkpoint_dir, exist_ok=True)
 
@@ -41,7 +41,7 @@ def load_checkpoint(model, optimizer, checkpoint_path):
 
 def finetune_loop(model: GPTModel, train_loader: DataLoader,
                   val_loader: DataLoader, optimizer: torch.optim.Optimizer,
-                  device: str, num_epochs: int, eval_checkpoint_freq: int, eval_iter: int, checkpoint_dir='../../../checkpoints'):
+                  device: str, num_epochs: int, eval_freq: int, checkpoint_freq: int, eval_iter: int, checkpoint_dir='../../../gpt2_checkpoints'):
 
     examples_seen, global_step = 0, 0
     train_losses, val_losses, train_accs, val_accs = [], [], [], []
@@ -59,8 +59,9 @@ def finetune_loop(model: GPTModel, train_loader: DataLoader,
 
             examples_seen += input_batch.shape[0]
             global_step += 1
+            print("Done learning steps: ", global_step)
 
-            if global_step % eval_checkpoint_freq == 0:
+            if global_step % eval_freq == 0:
                 train_loss, val_loss = evaluate_model(
                     model, train_loader, val_loader, device, eval_iter
                 )
@@ -70,19 +71,19 @@ def finetune_loop(model: GPTModel, train_loader: DataLoader,
                 print(f"Train loss {train_loss:.3f}")
                 print(f"Val loss {val_loss:.3f}")
                 print(f"Saving checkpoint")
+                train_accuracy = calc_accuracy_loader(
+                    train_loader, model, device, num_batches=eval_iter
+                )
+                val_accuracy = calc_accuracy_loader(
+                    val_loader, model, device, num_batches=eval_iter
+                )
+                print(f"Training accuracy: {train_accuracy * 100:.2f}%")
+                print(f"Val accuracy: {val_accuracy * 100:.2f}%")
+                train_accs.append(train_accuracy)
+                val_accs.append(val_accuracy)
+            if global_step % checkpoint_freq == 0:
                 save_checkpoint(model, optimizer, epoch, global_step,
                     train_losses, val_losses, train_accs, val_accs,checkpoint_dir)
-
-        train_accuracy = calc_accuracy_loader(
-            train_loader, model, device, num_batches = eval_iter
-        )
-        val_accuracy = calc_accuracy_loader(
-            val_loader, model, device, num_batches = eval_iter
-        )
-        print(f"Training accuracy: {train_accuracy*100:.2f}%")
-        print(f"Val accuracy: {val_accuracy*100:.2f}%")
-        train_accs.append(train_accuracy)
-        val_accs.append(val_accuracy)
 
     return train_losses, val_losses, train_accs, val_accs, examples_seen
 
@@ -121,7 +122,7 @@ def calc_accuracy_loader(data_loader: DataLoader, model: GPTModel, device: str, 
     return correct_predictions / num_examples 
 
 def calc_loss_batch(input_batch: torch.Tensor, target_batch: torch.Tensor, model: GPTModel, device: str):
-    batch_size, n_tokens = input_batch.shape
+    #batch_size, n_tokens = input_batch.shape
     input_batch = input_batch.to(device)
     target_batch = target_batch.to(device)            
     logits = model(input_batch)[:, -1, :] #take logits of last token

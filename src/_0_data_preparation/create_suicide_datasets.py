@@ -62,7 +62,7 @@ def encode_clean_texts(raw_data_path:str, encoded_data_path:str, tokenizer: tikt
 def clean_text(row: Dict[str, str], encoded_texts: List, labels: List, tokenizer: tiktoken.Encoding, max_encoding_length: int):
     if (len(row["text"]) > 0) and (len(row["class"]) > 0):
         encoded_text = tokenizer.encode(row["text"])
-        if (len(encoded_text) < 800): #based on suicide_token_count_hist.png
+        if (len(encoded_text) < 500): #based on suicide_token_count_hist.png
             if len(encoded_text) > max_encoding_length:
                 max_encoding_length = len(encoded_text)
             label = 1 if (row["class"].strip()=="suicide") else 0
