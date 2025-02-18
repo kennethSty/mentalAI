@@ -1,4 +1,4 @@
-from src._0_data_preparation.Tokenizer import BertTokenizer, GPTTokenizer
+from src._0_data_preparation.Tokenizer import EmoBertTokenizer, PsychBertTokenizer, GPTTokenizer
 
 GPT_BASEMODEL_CONFIG = {
     "model_size": "124M",
@@ -19,8 +19,8 @@ FINETUNE_CONFIG = {
     "max_length": 499,
     "batch_size": 8,
     "num_epochs":1,
-    "eval_freq":100,
-    "checkpoint_freq":100,
+    "eval_freq":500,
+    "checkpoint_freq":2000,
     "eval_iter":20,
     "lr":5e-5,
     "weight_decay":0.1
@@ -39,7 +39,8 @@ SUICIDE_DS_CONFIG = {
 
 TOKENIZER_CONFIG = {
     "gpt2": GPTTokenizer(),
-    "psychbert": BertTokenizer(),
+    "psychbert": PsychBertTokenizer(),
+    "emobert": EmoBertTokenizer()
 }
 
 

@@ -1,0 +1,179 @@
+/Users/Kenneth/miniforge3/envs/mentalAI/bin/python /Users/Kenneth/PycharmProjects/mentalAI/src/_4_model_finetuning/gpt2_finetuning/gpt2_finetuning.py
+All directories correctly setup.
+Using device: mps
+File already exists and is up-to-date: ../../../models/pretrained/gpt2/124M/checkpoint
+File already exists and is up-to-date: ../../../models/pretrained/gpt2/124M/encoder.json
+File already exists and is up-to-date: ../../../models/pretrained/gpt2/124M/hparams.json
+File already exists and is up-to-date: ../../../models/pretrained/gpt2/124M/model.ckpt.data-00000-of-00001
+File already exists and is up-to-date: ../../../models/pretrained/gpt2/124M/model.ckpt.index
+File already exists and is up-to-date: ../../../models/pretrained/gpt2/124M/model.ckpt.meta
+File already exists and is up-to-date: ../../../models/pretrained/gpt2/124M/vocab.bpe
+Reset csv maxsize to: 9223372036854775807
+Reset csv maxsize to: 9223372036854775807
+Loaded finetuning datasets
+train-accuracy before training: 0.53125
+test-accuracy before training: 0.4375
+val-accuracy before training: 0.46875
+
+Done learning steps:  1000
+20 reached
+20 reached
+Ep 1 (step 001000):
+Train loss 0.074
+Val loss 0.101
+Saving checkpoint
+Training accuracy: 97.50%
+Val accuracy: 96.25%
+
+Done learning steps:  2000
+20 reached
+20 reached
+Ep 1 (step 002000):
+Train loss 0.057
+Val loss 0.055
+Saving checkpoint
+Training accuracy: 98.75%
+Val accuracy: 98.75%
+Checkpoint saved to ../../../gpt2_checkpoints/checkpoint_step_2000.pth
+
+Done learning steps:  2500
+20 reached
+20 reached
+Ep 1 (step 002500):
+Train loss 0.059
+Val loss 0.087
+Saving checkpoint
+Training accuracy: 98.75%
+Val accuracy: 96.88%
+
+Done learning steps:  3000
+20 reached
+20 reached
+Ep 1 (step 003000):
+Train loss 0.049
+Val loss 0.051
+Saving checkpoint
+Training accuracy: 98.75%
+Val accuracy: 98.75%
+
+Done learning steps:  3500
+20 reached
+20 reached
+Ep 1 (step 003500):
+Train loss 0.057
+Val loss 0.060
+Saving checkpoint
+Training accuracy: 98.12%
+Val accuracy: 98.75%
+
+Done learning steps:  4000
+20 reached
+20 reached
+Ep 1 (step 004000):
+Train loss 0.035
+Val loss 0.073
+Saving checkpoint
+Training accuracy: 98.75%
+Val accuracy: 96.88%
+Checkpoint saved to ../../../gpt2_checkpoints/checkpoint_step_4000.pth
+
+Done learning steps:  4500
+20 reached
+20 reached
+Ep 1 (step 004500):
+Train loss 0.057
+Val loss 0.075
+Saving checkpoint
+Training accuracy: 98.75%
+Val accuracy: 97.50%
+
+Done learning steps:  5000
+20 reached
+20 reached
+Ep 1 (step 005000):
+Train loss 0.088
+Val loss 0.171
+Saving checkpoint
+Training accuracy: 98.75%
+Val accuracy: 95.00%
+
+Done learning steps:  5500
+20 reached
+20 reached
+Ep 1 (step 005500):
+Train loss 0.025
+Val loss 0.078
+Saving checkpoint
+Training accuracy: 99.38%
+Val accuracy: 97.50%
+
+Done learning steps:  6000
+20 reached
+20 reached
+Ep 1 (step 006000):
+Train loss 0.052
+Val loss 0.078
+Saving checkpoint
+Training accuracy: 98.75%
+Val accuracy: 98.12%
+Checkpoint saved to ../../../gpt2_checkpoints/checkpoint_step_6000.pth
+
+Done learning steps:  6500
+20 reached
+20 reached
+Ep 1 (step 006500):
+Train loss 0.028
+Val loss 0.057
+Saving checkpoint
+Training accuracy: 98.75%
+Val accuracy: 98.12%
+
+Done learning steps:  7000
+20 reached
+20 reached
+Ep 1 (step 007000):
+Train loss 0.025
+Val loss 0.082
+Saving checkpoint
+Training accuracy: 99.38%
+Val accuracy: 97.50%
+
+Done learning steps:  7500
+20 reached
+20 reached
+Ep 1 (step 007500):
+Train loss 0.021
+Val loss 0.070
+Saving checkpoint
+Training accuracy: 99.38%
+Val accuracy: 98.75%
+
+Done learning steps:  8000
+20 reached
+20 reached
+Ep 1 (step 008000):
+Train loss 0.027
+Val loss 0.070
+Saving checkpoint
+Training accuracy: 99.38%
+Val accuracy: 97.50%
+Checkpoint saved to ../../../gpt2_checkpoints/checkpoint_step_8000.pth
+
+Done learning steps:  8500
+20 reached
+20 reached
+Ep 1 (step 008500):
+Train loss 0.046
+Val loss 0.069
+Saving checkpoint
+Training accuracy: 98.75%
+Val accuracy: 97.50%
+
+20 reached
+20 reached
+Ep 1 (step 009000):
+Train loss 0.040
+Val loss 0.063
+Saving checkpoint
+Training accuracy: 98.75%
+Val accuracy: 98.75%

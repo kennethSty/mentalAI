@@ -1,12 +1,17 @@
+import torch
 from langchain_community.llms import LlamaCpp
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
 from typing import Dict
 
 from src._1_chroma_preparation.embed_utils import EmbeddingFunction
 from src._1_chroma_preparation.chroma_utils import ChromaCollectionManager
+from src._3_model_preparation.emobert_architecture.EmoBertClassifier import EmoBertClassifier
+from src._3_model_preparation.gpt_architecture.GPTClassifier import GPTClassifier
+from src._3_model_preparation.psychbert_architecture.PsychBertClassifier import PsychBertClassifier
+from src.utils.gpu_utils import DeviceManager
+
 
 class ChatPipeline:
     def __init__(
@@ -24,8 +29,10 @@ class ChatPipeline:
             chroma_path=chroma_path,
             collection_embed_dict=collection_embed_dict
         )
+        self.suicide_classifier = self.__init_suicide_classifier(model_name = "gpt2")
 
     def get_answer(self, question: str):
+        suicide_risk = self.suicide_classifier.classify(question)
         top_pubmed_docs = self.collection_dict["pubmed_collection"]\
             .max_marginal_relevance_search(question, k=self.top_k)
         top_conv_docs = self.collection_dict["conv_collection"]\
@@ -43,6 +50,23 @@ class ChatPipeline:
                 "user_query": question
         })
         return answer
+
+    def __init_suicide_classifier(self, model_name: str):
+        device = DeviceManager().get_device()
+        if model_name == "gpt2":
+            model = GPTClassifier().to(device)
+            checkpoint = torch.load("../../models/finetuned/gpt2_checkpoints/checkpoint_step_8000.pth")
+            model.load_state_dict(checkpoint['model_state_dict'])
+        elif model_name == "psychbert":
+            model = PsychBertClassifier().to(device)
+            #TODO: Load from checkpoint
+        else:
+            assert model_name == "emobert", "model_flag should be emobert"
+            model = EmoBertClassifier().to(device)
+            #TODO: Load form checkpoint
+
+        return model
+
 
     def __init_collections(
             self,

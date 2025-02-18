@@ -32,12 +32,13 @@ class SuicideStreamDataset(IterableDataset):
                 label = int(row["class"])
                 # Truncate & Pad
                 encoded_text = encoded_text[:self.max_length] + [self.pad_token_id] * max(0, self.max_length - len(encoded_text))
-
+                attention_mask = [1 for _ in range(len(encoded_text))] + [0] * max(0, self.max_length - len(encoded_text))
 
                 # Use yield for efficient streaming (returns and remembers where left of in iteration)
                 yield (
                     torch.tensor(encoded_text, dtype=torch.long),
-                    torch.tensor(label, dtype=torch.long)
+                    torch.tensor(label, dtype=torch.long),
+                    torch.tensor(attention_mask, dtype=torch.long)
                 )
 
 class SuicideDataset(Dataset):
@@ -54,13 +55,19 @@ class SuicideDataset(Dataset):
             lambda encoded_text:
             encoded_text + [self.pad_token_id] * (self.max_length - len(encoded_text))
         )
+        self.data["attention_mask"] = self.data["encoded_text"].apply(
+            lambda encoded_text:
+            [1 for _ in encoded_text] + [0] * (self.max_length - len(encoded_text))
+        )
 
     def __getitem__(self, index):
         encoded = self.data.iloc[index]["encoded_text"]
+        attention_mask = self.data.iloc[index]["attention_mask"]
         label = self.data.iloc[index]["class"]
         return (
             torch.tensor(encoded, dtype=torch.long),
-            torch.tensor(label, dtype=torch.long)
+            torch.tensor(label, dtype=torch.long),
+            torch.tensor(attention_mask, dtype=torch.long)
         )
 
     def __len__(self):

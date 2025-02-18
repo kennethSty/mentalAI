@@ -3,6 +3,9 @@ import torch
 import os
 import torch.nn as nn
 
+from src._3_model_preparation.gpt_architecture.GPTModel import GPTModel
+from src._3_model_preparation.psychbert_architecture.PsychBertClassifier import PsychBertClassifier
+
 def save_checkpoint(model, optimizer, epoch, global_step, train_losses, val_losses,
                     train_accs, val_accs, checkpoint_dir):
 
@@ -48,10 +51,10 @@ def finetune_loop(model: nn.Module, train_loader: DataLoader,
     for epoch in range(num_epochs):
         model.train()
 
-        for input_batch, target_batch in train_loader:
+        for input_batch, target_batch, attention_mask_batch in train_loader:
             optimizer.zero_grad()
             loss = calc_loss_batch(
-                input_batch, target_batch, model, device
+                input_batch, target_batch, attention_mask_batch, model, device
             )
             loss.backward()
             optimizer.step()
@@ -92,45 +95,50 @@ def finetune_loop(model: nn.Module, train_loader: DataLoader,
 
 
 def calc_accuracy_loader(data_loader: DataLoader, model: nn.Module, device: str, num_batches = None):
-
     model.eval()
     correct_predictions, num_examples = 0,0
 
-    for i, (input_batch, target_batch) in enumerate(data_loader):
+    for i, (input_batch, target_batch, attention_mask_batch) in enumerate(data_loader):
         if num_batches is not None and i >= num_batches:
             break
-        input_batch = input_batch.to(device)
-        target_batch = target_batch.to(device)
-
-        #take logit of last token because the last token has attn scores to all other tokens
         with torch.inference_mode():
-            logits = model(input_batch)
+            input_batch = input_batch.to(device)
+            target_batch = target_batch.to(device)
+            if isinstance(model, PsychBertClassifier):
+                attention_mask_batch = attention_mask_batch.to(device)
+                logits = model(input_batch, attention_mask_batch)
+            else:
+                logits = model(input_batch)
         pred_labels = torch.argmax(logits, dim=-1)
         num_examples += pred_labels.shape[0]
         correct_predictions += (pred_labels == target_batch).sum().item()
-
+    model.train()
     return correct_predictions / num_examples 
 
-def calc_loss_batch(input_batch: torch.Tensor, target_batch: torch.Tensor, model: nn.Module, device: str):
+def calc_loss_batch(input_batch: torch.Tensor, target_batch: torch.Tensor, attention_mask_batch: torch.Tensor, model: nn.Module, device: str):
     #batch_size, n_tokens = input_batch.shape
     input_batch = input_batch.to(device)
-    target_batch = target_batch.to(device)            
-    logits = model(input_batch) #is logits of last token
+    target_batch = target_batch.to(device)
+    if isinstance(model, PsychBertClassifier):
+        attention_mask_batch = attention_mask_batch.to(device)
+        logits = model(input_batch, attention_mask_batch)
+    else:
+        logits = model(input_batch) #is logits of last token
     loss = torch.nn.functional.cross_entropy(logits, target_batch)
     return loss
 
 def calc_loss_loader(data_loader: DataLoader, model: nn.Module, device: str, num_batches = None):
     total_loss = 0
-
-    for i, (input_batch, target_batch) in enumerate(data_loader):
+    model.eval()
+    for i, (input_batch, target_batch, attention_mask_batch) in enumerate(data_loader):
         if num_batches is not None and i >= num_batches:
             print(f"{num_batches} reached")
             break
         loss = calc_loss_batch(
-            input_batch, target_batch, model, device
+            input_batch, target_batch, attention_mask_batch, model, device
         )
         total_loss += loss.item()
-
+    model.train()
     return total_loss / num_batches
 
 def assess_pretrain_accuracy(model: nn.Module, dataloader: DataLoader, device: str, label: str):
@@ -149,6 +157,7 @@ def evaluate_model_loss(model: nn.Module, data_loader: DataLoader, device: str, 
         accuracy = calc_loss_loader(
             data_loader, model, device, num_batches = num_batches
         )
+    model.train()
     return accuracy
 
 def evaluate_model_acc(model: nn.Module, data_loader: DataLoader, device: str, num_batches: int):
@@ -157,5 +166,6 @@ def evaluate_model_acc(model: nn.Module, data_loader: DataLoader, device: str, n
         accuracy = calc_accuracy_loader(
             data_loader, model, device, num_batches = num_batches
         )
+    model.train()
     return accuracy
 
