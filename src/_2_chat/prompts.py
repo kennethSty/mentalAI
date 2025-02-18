@@ -14,6 +14,9 @@ def get_prompt():
     How other professional counselors have answered similar questions:
     {top_k_conversations}
     
+    #### **Users Mental Health Status**
+    The users suicide risk is classified as: {suicide_risk}
+    
     **Now, respond to the user's last response in a warm, supportive, and evidence-based way. 
     Only print your response. Nothing else.** 
     
