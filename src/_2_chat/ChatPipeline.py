@@ -10,6 +10,7 @@ from src._1_chroma_preparation.chroma_utils import ChromaCollectionManager
 from src._3_model_preparation.emobert_architecture.EmoBertClassifier import EmoBertClassifier
 from src._3_model_preparation.gpt_architecture.GPTClassifier import GPTClassifier
 from src._3_model_preparation.psychbert_architecture.PsychBertClassifier import PsychBertClassifier
+from src._5_model_evaluation.evaluation_utils import load_finetuned_model
 from src.utils.gpu_utils import DeviceManager
 
 
@@ -54,17 +55,7 @@ class ChatPipeline:
 
     def __init_suicide_classifier(self, model_name: str):
         device = DeviceManager().get_device()
-        if model_name == "gpt2":
-            model = GPTClassifier().to(device)
-            checkpoint = torch.load("../../models/finetuned/gpt2_checkpoints/checkpoint_step_8000.pth")
-            model.load_state_dict(checkpoint['model_state_dict'])
-        elif model_name == "psychbert":
-            model = PsychBertClassifier().to(device)
-            #TODO: Load from checkpoint
-        else:
-            assert model_name == "emobert", "model_flag should be emobert"
-            model = EmoBertClassifier().to(device)
-            #TODO: Load form checkpoint
+        model, _ = load_finetuned_model(model_flag=model_name, device=device)
 
         return model
 

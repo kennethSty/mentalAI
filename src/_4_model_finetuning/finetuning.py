@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import pandas as pd
 
-from src._4_model_finetuning.finetuning_utils import finetune_loop, assess_pretrain_accuracy
+from src._4_model_finetuning.finetuning_utils import finetune_loop, print_pretrain_accuracy
 from src.utils.paths_utils import check_and_create_directories
 from src._3_model_preparation.gpt_architecture.GPTClassifier import GPTClassifier
 from src._3_model_preparation.psychbert_architecture.PsychBertClassifier import PsychBertClassifier
@@ -40,9 +40,9 @@ def finetune_classification_head(model: nn.Module, tokenizer: Tokenizer, model_f
     )
 
     if accuracy_before_train:
-        assess_pretrain_accuracy(model=model,dataloader=train_loader,device=device, label="train")
-        assess_pretrain_accuracy(model=model, dataloader=test_loader, device=device, label="test")
-        assess_pretrain_accuracy(model=model, dataloader=val_loader, device=device, label="val")
+        print_pretrain_accuracy(model=model, dataloader=train_loader, device=device, label="train")
+        print_pretrain_accuracy(model=model, dataloader=test_loader, device=device, label="test")
+        print_pretrain_accuracy(model=model, dataloader=val_loader, device=device, label="val")
 
     optimizer = torch.optim.AdamW(
         params=model.parameters(),
@@ -99,5 +99,6 @@ if __name__ == "__main__":
     finetune_classification_head(
         model = model,
         tokenizer=tokenizer,
+        model_flag=model_flag,
         accuracy_before_train=True
     )

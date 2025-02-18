@@ -6,41 +6,6 @@ import torch.nn as nn
 from src._3_model_preparation.gpt_architecture.GPTModel import GPTModel
 from src._3_model_preparation.psychbert_architecture.PsychBertClassifier import PsychBertClassifier
 
-def save_checkpoint(model, optimizer, epoch, global_step, train_losses, val_losses,
-                    train_accs, val_accs, checkpoint_dir):
-
-    os.makedirs(checkpoint_dir, exist_ok=True)
-
-    checkpoint = {
-        'epoch': epoch,
-        'global_step': global_step,
-        'train_losses': train_losses,
-        'val_losses': val_losses,
-        'train_accs': train_accs,
-        'val_accs': val_accs,
-        'model_state_dict': model.state_dict(),
-        'optimizer_state_dict': optimizer.state_dict(),
-    }
-
-    checkpoint_path = os.path.join(checkpoint_dir, f'checkpoint_step_{global_step}.pth')
-    torch.save(checkpoint, checkpoint_path)
-    print(f"Checkpoint saved to {checkpoint_path}")
-
-def load_checkpoint(model, optimizer, checkpoint_path):
-    checkpoint = torch.load(checkpoint_path)
-    model.load_state_dict(checkpoint['model_state_dict'])
-    optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-
-    epoch = checkpoint['epoch']
-    global_step = checkpoint['global_step']
-    train_losses = checkpoint['train_losses']
-    val_losses = checkpoint['val_losses']
-    train_accs = checkpoint['train_accs']
-    val_accs = checkpoint['val_accs']
-
-    print(f"Checkpoint loaded from {checkpoint_path}")
-    return epoch, global_step, train_losses, val_losses, train_accs, val_accs
-
 def finetune_loop(model: nn.Module, train_loader: DataLoader,
                   val_loader: DataLoader, optimizer: torch.optim.Optimizer,
                   device: str, num_epochs: int, eval_freq: int, checkpoint_freq: int, eval_iter: int, checkpoint_dir='../../../gpt2_checkpoints'):
@@ -64,10 +29,10 @@ def finetune_loop(model: nn.Module, train_loader: DataLoader,
             print("Done learning steps: ", global_step)
 
             if global_step % eval_freq == 0:
-                train_loss = evaluate_model_loss(
+                train_loss = calc_loss_loader(
                     model, train_loader, device, eval_iter
                 )
-                val_loss = evaluate_model_loss(
+                val_loss = calc_loss_loader(
                     model, val_loader, device, eval_iter
                 )
                 train_losses.append(train_loss)
@@ -76,10 +41,10 @@ def finetune_loop(model: nn.Module, train_loader: DataLoader,
                 print(f"Train loss {train_loss:.3f}")
                 print(f"Val loss {val_loss:.3f}")
                 print(f"Saving checkpoint")
-                train_accuracy = evaluate_model_acc(
+                train_accuracy = calc_accuracy_loader(
                     data_loader=train_loader, model=model, device=device, num_batches=eval_iter
                 )
-                val_accuracy = evaluate_model_acc(
+                val_accuracy = calc_accuracy_loader(
                     data_loader=val_loader, model=model, device=device, num_batches=eval_iter
                 )
                 print(f"Training accuracy: {train_accuracy * 100:.2f}%")
@@ -91,29 +56,6 @@ def finetune_loop(model: nn.Module, train_loader: DataLoader,
                     train_losses, val_losses, train_accs, val_accs,checkpoint_dir)
 
     return train_losses, val_losses, train_accs, val_accs, examples_seen
-
-
-
-def calc_accuracy_loader(data_loader: DataLoader, model: nn.Module, device: str, num_batches = None):
-    model.eval()
-    correct_predictions, num_examples = 0,0
-
-    for i, (input_batch, target_batch, attention_mask_batch) in enumerate(data_loader):
-        if num_batches is not None and i >= num_batches:
-            break
-        with torch.inference_mode():
-            input_batch = input_batch.to(device)
-            target_batch = target_batch.to(device)
-            if isinstance(model, PsychBertClassifier):
-                attention_mask_batch = attention_mask_batch.to(device)
-                logits = model(input_batch, attention_mask_batch)
-            else:
-                logits = model(input_batch)
-        pred_labels = torch.argmax(logits, dim=-1)
-        num_examples += pred_labels.shape[0]
-        correct_predictions += (pred_labels == target_batch).sum().item()
-    model.train()
-    return correct_predictions / num_examples 
 
 def calc_loss_batch(input_batch: torch.Tensor, target_batch: torch.Tensor, attention_mask_batch: torch.Tensor, model: nn.Module, device: str):
     #batch_size, n_tokens = input_batch.shape
@@ -141,31 +83,75 @@ def calc_loss_loader(data_loader: DataLoader, model: nn.Module, device: str, num
     model.train()
     return total_loss / num_batches
 
-def assess_pretrain_accuracy(model: nn.Module, dataloader: DataLoader, device: str, label: str):
+def evaluate_model_predscores(model: nn.Module, data_loader: DataLoader, device: str, num_batches: int):
     model.eval()
     with torch.inference_mode():
-        accuracy = calc_accuracy_loader(
-            dataloader, model, device, num_batches=4
+        true_positives, true_negatives, false_positives, false_negatives = calc_predscores_loader(
+            data_loader, model, device, num_batches = num_batches
         )
-    print(f"{label}-accuracy before training:", accuracy)
+
+    n_examples = true_positives + true_negatives + false_positives + false_negatives
+    precision = true_positives / (true_positives + false_positives)
+    recall = true_positives / (true_positives + false_negatives)
+    accuracy = (true_positives + true_negatives) / n_examples
+    f1 = 2 * (precision * recall) / (precision + recall)
     model.train()
+    return precision, recall, accuracy, f1
+
+def calc_accuracy_loader(data_loader: DataLoader, model: nn.Module, device: str, num_batches = None):
+    model.eval()
+    true_positives, true_negatives, false_positives, false_negatives = calc_predscores_loader(data_loader, model, device, num_batches)
+    return (true_positives + true_negatives) / (true_positives + true_negatives + false_positives + false_negatives)
+
+def calc_predscores_loader(data_loader: DataLoader, model: nn.Module, device: str, num_batches = None):
+    model.eval()
+    true_positives, true_negatives, false_positives, false_negatives = 0, 0, 0, 0
+
+    for i, (input_batch, target_batch, attention_mask_batch) in enumerate(data_loader):
+        if num_batches is not None and i >= num_batches:
+            break
+        with torch.inference_mode():
+            input_batch = input_batch.to(device)
+            target_batch = target_batch.to(device)
+            if isinstance(model, PsychBertClassifier):
+                attention_mask_batch = attention_mask_batch.to(device)
+                logits = model(input_batch, attention_mask_batch)
+            else:
+                logits = model(input_batch)
+        pred_labels = torch.argmax(logits, dim=-1)
+        pred_is_correct = (pred_labels == target_batch)
+        pred_is_wrong = (pred_labels != target_batch)
+        true_positives += (pred_is_correct & (pred_labels == 1)).sum().item()
+        true_negatives += (pred_is_correct & (pred_labels == 0)).sum().item()
+        false_positives += (pred_is_wrong & (pred_labels == 1)).sum().item()
+        false_negatives += (pred_is_wrong & (pred_labels == 0)).sum().item()
+    model.train()
+    return true_positives, true_negatives, false_positives, false_negatives
+
+
+def print_pretrain_accuracy(model: nn.Module, dataloader: DataLoader, device: str, label: str):
+    accuracy = calc_accuracy_loader(
+        dataloader, model, device, num_batches=4
+    )
+    print(f"{label}-accuracy before training:", accuracy)
     return
 
-def evaluate_model_loss(model: nn.Module, data_loader: DataLoader, device: str, num_batches: int):
-    model.eval()
-    with torch.inference_mode():
-        accuracy = calc_loss_loader(
-            data_loader, model, device, num_batches = num_batches
-        )
-    model.train()
-    return accuracy
+def save_checkpoint(model, optimizer, epoch, global_step, train_losses, val_losses,
+                    train_accs, val_accs, checkpoint_dir):
 
-def evaluate_model_acc(model: nn.Module, data_loader: DataLoader, device: str, num_batches: int):
-    model.eval()
-    with torch.inference_mode():
-        accuracy = calc_accuracy_loader(
-            data_loader, model, device, num_batches = num_batches
-        )
-    model.train()
-    return accuracy
+    os.makedirs(checkpoint_dir, exist_ok=True)
 
+    checkpoint = {
+        'epoch': epoch,
+        'global_step': global_step,
+        'train_losses': train_losses,
+        'val_losses': val_losses,
+        'train_accs': train_accs,
+        'val_accs': val_accs,
+        'model_state_dict': model.state_dict(),
+        'optimizer_state_dict': optimizer.state_dict(),
+    }
+
+    checkpoint_path = os.path.join(checkpoint_dir, f'checkpoint_step_{global_step}.pth')
+    torch.save(checkpoint, checkpoint_path)
+    print(f"Checkpoint saved to {checkpoint_path}")
