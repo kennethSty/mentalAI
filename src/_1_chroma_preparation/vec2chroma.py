@@ -2,6 +2,7 @@ import chromadb
 import csv
 import ast
 from time import time
+from tqdm import tqdm
 from src._1_chroma_preparation.chroma_utils import ChromaCollectionManager
 
 def upsert_embeddings(emb_path: str,
@@ -22,7 +23,8 @@ def upsert_embeddings(emb_path: str,
         inserted_rows = 0
         unique_docs = set()
         
-        start_insertion = time()
+        bar = tqdm()
+        start = time()
         for row in reader:
 
             id = row[doc_fieldname]  # set id as the document itself, not important
@@ -41,7 +43,7 @@ def upsert_embeddings(emb_path: str,
                     embeddings=embeddings,
                 )
                 inserted_rows += len(batch)
-                print(f"docs inserted: {inserted_rows}")
+                bar.update(len(batch))
                 batch = []
                 ids = []
                 embeddings = []
@@ -59,37 +61,27 @@ def upsert_embeddings(emb_path: str,
             embeddings.clear()
             metadatas.clear()
         
-        end_insertion = time()
+        end = time()
+        bar.close()
         embedding_csv.close()
         
         print("done!")
         print(f"inserted in total {inserted_rows} docs")
-        print(f"insertion duration: {(end_insertion - start_insertion)/60:.2f}min")
+        print(f"insertion duration: {(end - start)/60:.2f}min")
 
 def main():
 
-    pubmed_emb_path = "../../data/03_embedded/embedded_abstracts.csv"
-    conv_emb_path = "../../data/03_embedded/embedded_conversations.csv"
+    pubmed_emb_path = "data/03_embedded/pubmed_abstracts.csv"
 
-    chroma_handler = ChromaCollectionManager(persist_dir="../../data/chroma")
+    chroma_handler = ChromaCollectionManager(persist_dir="data/chroma")
     pubmed_collection = chroma_handler.create_empty_collection(
         collection_name="pubmed_collection"
-    )
-    conv_collection = chroma_handler.create_empty_collection(
-        collection_name="conv_collection"
     )
 
     upsert_embeddings(
         emb_path=pubmed_emb_path,
         collection=pubmed_collection,
         doc_fieldname="doc",
-        embed_fieldname="embedding"
-    )
-
-    upsert_embeddings(
-        emb_path=conv_emb_path,
-        collection=conv_collection,
-        doc_fieldname="question_answer_pair(s)",
         embed_fieldname="embedding"
     )
 

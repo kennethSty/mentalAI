@@ -1,5 +1,7 @@
 import csv
+import os
 from time import time
+from tqdm import tqdm
 from typing import List
 from abc import ABC, abstractmethod
 
@@ -10,7 +12,7 @@ from src.utils.gpu_utils import DeviceManager
 
 class BaseEmbedder(ABC):
 
-    BATCH_SIZE = 2  # 128 + 64 + 32 (Precomputed for optimal CUDA utilization)
+    BATCH_SIZE = 4 # 128 + 64 + 32 (Precomputed for optimal CUDA utilization)
 
     def __init__(self, model:EmbedModelWrapper, input_doc_path: str, output_emb_path:str):
         self.model = model
@@ -24,11 +26,11 @@ class BaseEmbedder(ABC):
         pass
 
     @abstractmethod
-    def _embed_and_write_batch(self, writer, year_batch: List[str], doc_batch: List[str]):
+    def embed_and_write_batch(self, writer, year_batch: List[str], doc_batch: List[str]):
         """Method to be overridden for embedding and writing the batch."""
         pass
 
-    def _print_finish(self, elapsed_time):
+    def print_finish(self, elapsed_time):
         print(f"done!\nembedded in total {self.total_docs_processed} docs\ntotal time: {elapsed_time:.2f}min")
         print(f"found {self.duplicates} duplicate docs")
         print(f"found {self.abstracts_missing} missing abstracts")
@@ -43,47 +45,50 @@ class PubMedEmbedder(BaseEmbedder):
     def create_embeddings(self):
         """Processes the CSV and creates embeddings."""
         CSVUtils.increase_csv_maxsize()
+        bar = tqdm()
         start = time()
 
         with open(self.input_doc_path, encoding="utf-8") as input_csv, \
-             open(self.output_emb_path, "w", encoding="utf-8") as output_csv:
+            open(self.output_emb_path, "w", encoding="utf-8") as output_csv:
 
             reader = csv.DictReader(input_csv)
             writer = csv.DictWriter(output_csv, fieldnames=["year", "doc", "embedding"])
-            writer.writeheader()
+            if os.stat(self.output_emb_path).st_size == 0:
+                writer.writeheader()
 
             doc_batch, year_batch = [], []
 
             for row in reader:
                 doc = Document(row)
-                scanned_doc = self.__scan_doc(doc)
+                scanned_doc = self.scan_doc(doc)
                 if scanned_doc:
                     doc_string, year = scanned_doc
                     doc_batch.append(doc_string)
                     year_batch.append(year)
 
                 if len(doc_batch) >= self.BATCH_SIZE:
-                    self.__embed_and_write_batch(
+                    self.embed_and_write_batch(
                         writer = writer,
                         year_batch = year_batch,
                         doc_batch = doc_batch
                     )
                     self.total_docs_processed += self.BATCH_SIZE
-                    print(f"Embedded {self.total_docs_processed} docs")
+                    bar.update(self.BATCH_SIZE)
                     year_batch.clear()
                     doc_batch.clear()
 
             if doc_batch:
-                self.__embed_and_write_batch(writer, year_batch=year_batch, doc_batch=doc_batch)
+                self.embed_and_write_batch(writer, year_batch=year_batch, doc_batch=doc_batch)
                 self.total_docs_processed += len(doc_batch)
                 year_batch.clear()
                 doc_batch.clear()
 
         end = time()
+        bar.close()
         elapsed_time = (end - start) / 60
-        self._print_finish(elapsed_time)
+        self.print_finish(elapsed_time)
 
-    def _scan_doc(self, doc: Document):
+    def scan_doc(self, doc: Document):
         """
         Scans a Document object for missing information and tracks it
         :param doc: the input document
@@ -107,7 +112,7 @@ class PubMedEmbedder(BaseEmbedder):
         doc_string = doc.get_combined_doc()
         return doc_string, year
 
-    def _embed_and_write_batch(self, writer: csv.DictWriter, doc_batch: List[str], year_batch: List[str]):
+    def embed_and_write_batch(self, writer: csv.DictWriter, doc_batch: List[str], year_batch: List[str]):
         """Embeds a batch of documents based on the docstring"""
         embeddings = self.model.encode(doc_batch)
         rows_to_write = [
@@ -141,7 +146,7 @@ class ConversationEmbedder(BaseEmbedder):
                 question_batch.append(row["question(s)"])
 
                 if len(qa_pair_batch) > self.BATCH_SIZE:
-                    self._embed_and_write_batch(
+                    self.embed_and_write_batch(
                         writer=writer,
                         qa_pair_batch=qa_pair_batch,
                         question_batch=question_batch
@@ -150,7 +155,7 @@ class ConversationEmbedder(BaseEmbedder):
                     question_batch.clear()
 
             if qa_pair_batch:
-                self._embed_and_write_batch(
+                self.embed_and_write_batch(
                     writer=writer,
                     qa_pair_batch=qa_pair_batch,
                     question_batch=question_batch
@@ -160,10 +165,10 @@ class ConversationEmbedder(BaseEmbedder):
 
             end = time()
             elapsed_time = (end - start) / 60
-            self._print_finish(elapsed_time)
+            self.print_finish(elapsed_time)
 
 
-    def _embed_and_write_batch(self, writer: csv.DictWriter, qa_pair_batch: List[str], question_batch: List[str]):
+    def embed_and_write_batch(self, writer: csv.DictWriter, qa_pair_batch: List[str], question_batch: List[str]):
         """Embeds a batch of documents based on the docstring"""
         embeddings = self.model.encode(question_batch)
         rows_to_write = [
@@ -176,19 +181,15 @@ class ConversationEmbedder(BaseEmbedder):
 def main():
     device = DeviceManager().get_device()
     pubmed_emb_model = PubMedBert(device=device)
-    counsel_emb_model = MiniLML6(device=device)
-    pubmed_embedder = PubMedEmbedder(
-        model = pubmed_emb_model,
-        input_doc_path ="../../data/02_train_test_splits/train/pubmed_abstracts.csv",
-        output_emb_path ="../../data/03_embedded/embedded_abstracts.csv"
-    )
-    counsel_embedder = ConversationEmbedder(
-        model = counsel_emb_model,
-        input_doc_path ="../../data/02_train_test_splits/train/counsel_conversations_train.csv",
-        output_emb_path ="../../data/03_embedded/embedded_conversations.csv"
-    )
-    pubmed_embedder.create_embeddings()
-    counsel_embedder.create_embeddings()
+
+    for file in os.listdir("data/00_raw/pubmed/"):
+        print(f"Embedding {file}")
+        pubmed_embedder = PubMedEmbedder(
+            model = pubmed_emb_model,
+            input_doc_path =f"data/00_raw/pubmed/{file}",
+            output_emb_path ="data/03_embedded/pubmed_abstracts.csv"
+        )
+        pubmed_embedder.create_embeddings()
 
 
 if __name__ == "__main__":
