@@ -86,7 +86,7 @@ def calc_loss_loader(data_loader: DataLoader, model: nn.Module, device: str, num
 def evaluate_model_predscores(model: nn.Module, data_loader: DataLoader, device: str, num_batches: int):
     model.eval()
     with torch.inference_mode():
-        true_positives, true_negatives, false_positives, false_negatives = calc_predscores_loader(
+        true_positives, true_negatives, false_positives, false_negatives, false_classified_inputs = calc_predscores_loader(
             data_loader, model, device, num_batches = num_batches
         )
 
@@ -96,18 +96,21 @@ def evaluate_model_predscores(model: nn.Module, data_loader: DataLoader, device:
     accuracy = (true_positives + true_negatives) / n_examples
     f1 = 2 * (precision * recall) / (precision + recall)
     model.train()
-    return precision, recall, accuracy, f1
+    return precision, recall, accuracy, f1, false_classified_inputs
 
 def calc_accuracy_loader(data_loader: DataLoader, model: nn.Module, device: str, num_batches = None):
     model.eval()
-    true_positives, true_negatives, false_positives, false_negatives = calc_predscores_loader(data_loader, model, device, num_batches)
+    true_positives, true_negatives, false_positives, false_negatives, _ = calc_predscores_loader(data_loader, model, device, num_batches)
     return (true_positives + true_negatives) / (true_positives + true_negatives + false_positives + false_negatives)
 
 def calc_predscores_loader(data_loader: DataLoader, model: nn.Module, device: str, num_batches = None):
     model.eval()
+    false_classified_inputs = []
     true_positives, true_negatives, false_positives, false_negatives = 0, 0, 0, 0
 
     for i, (input_batch, target_batch, attention_mask_batch) in enumerate(data_loader):
+        if i % 500 == 0:
+            print(f"evaluated {i} instances")
         if num_batches is not None and i >= num_batches:
             break
         with torch.inference_mode():
@@ -125,8 +128,14 @@ def calc_predscores_loader(data_loader: DataLoader, model: nn.Module, device: st
         true_negatives += (pred_is_correct & (pred_labels == 0)).sum().item()
         false_positives += (pred_is_wrong & (pred_labels == 1)).sum().item()
         false_negatives += (pred_is_wrong & (pred_labels == 0)).sum().item()
+
+        if false_positives + false_negatives > 0:
+            for j in range(len(input_batch)):
+                if pred_is_wrong[j]:
+                    false_classified_inputs.append({"pred_label": pred_labels[j].cpu().numpy(), "input": input_batch[j].cpu().numpy()})
+
     model.train()
-    return true_positives, true_negatives, false_positives, false_negatives
+    return true_positives, true_negatives, false_positives, false_negatives, false_classified_inputs
 
 
 def print_pretrain_accuracy(model: nn.Module, dataloader: DataLoader, device: str, label: str):
