@@ -5,29 +5,35 @@ from src._2_chat.prompts import get_prompt
 
 from langchain.prompts import PromptTemplate
 
-def chat():
-    device_handler = DeviceManager()
-    device = device_handler.get_device()
-
+def init_conversation(device):
     top_k = 2
     collection_embed_dict = init_collections()
     prompt = PromptTemplate(
         template=get_prompt(),
-        input_variables=["top_k_abstracts", "top_k_conversations", "suicide_risk", "user_query"]
+        input_variables=[
+            #"top_k_abstracts", "top_k_conversations", "suicide_risk",
+            "user_query"]
     )
     llm_pipe = ChatPipeline(
         top_k=top_k,
-        model_path="../../models/pretrained/llama-2-7b-chat.Q5_K_M.gguf",
-        chroma_path="../../data/chroma",
+        model_path="models/pretrained/llama-2-7b-chat.Q5_K_M.gguf",
+        chroma_path="data/chroma",
         collection_embed_dict = collection_embed_dict,
         prompt = prompt,
     )
+
+    return llm_pipe
+
+def chat():
+    device_handler = DeviceManager()
+    device = device_handler.get_device()
+
+    llm_pipe = init_conversation(device=device)
 
     question = input("Your question: ")
     while (question.strip().lower() != "/exit"):
         llm_pipe.get_answer(question)
         question = input("Your question: ")
-
 
 def init_collections():
     device = DeviceManager().get_device()

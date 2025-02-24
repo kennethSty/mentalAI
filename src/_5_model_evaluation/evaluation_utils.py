@@ -9,8 +9,8 @@ from src.config import TOKENIZER_CONFIG
 
 
 def load_finetuned_model(model_flag: str, device: str):
-    checkpoint_path = Path(f"../../models/finetuned/{model_flag}_checkpoints/checkpoint_step_8000.pth")
-    checkpoint = torch.load(checkpoint_path)
+    checkpoint_path = Path(f"models/finetuned/{model_flag}_checkpoints/checkpoint_step_8000.pth")
+    checkpoint = torch.load(checkpoint_path, map_location=device)
 
     if model_flag == "gpt2":
         model = GPTClassifier()

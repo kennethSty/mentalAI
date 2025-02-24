@@ -11,7 +11,7 @@ from src.config import TOKENIZER_CONFIG
 
 
 class GPTClassifier(nn.Module):
-    def __init__(self, models_dir = Path("../../../models/pretrained/gpt2")):
+    def __init__(self, models_dir = Path("models/pretrained/gpt2")):
         super().__init__()
         self.settings, self.params = download_and_load_gpt2(
             model_size=GPT_BASEMODEL_CONFIG["model_size"], models_dir=models_dir

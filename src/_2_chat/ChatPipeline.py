@@ -46,9 +46,9 @@ class ChatPipeline:
         top_k_conversations = "\n\n".join(top_k_conversations)
 
         answer = self.chain.invoke({
-                "top_k_abstracts": top_k_abstracts,
-                "top_k_conversations": top_k_conversations,
-                "suicide_risk": suicide_risk,
+                # "top_k_abstracts": top_k_abstracts,
+                # "top_k_conversations": top_k_conversations,
+                # "suicide_risk": suicide_risk,
                 "user_query": question
         })
         return answer
