@@ -6,13 +6,17 @@ from src._2_chat.prompts import get_prompt
 from langchain.prompts import PromptTemplate
 
 def init_conversation(device):
-    top_k = 2
+    top_k = 1
     collection_embed_dict = init_collections()
     prompt = PromptTemplate(
         template=get_prompt(),
         input_variables=[
-            #"top_k_abstracts", "top_k_conversations", "suicide_risk",
-            "user_query"]
+            "top_k_abstracts",
+            "top_k_conversations",
+            "suicide_risk",
+            "emotion",
+            "user_query",
+        ]
     )
     llm_pipe = ChatPipeline(
         top_k=top_k,

@@ -8,9 +8,16 @@ from src.config import FINETUNE_EVAL_CONFIG
 from pathlib import Path
 import logging
 from src.utils.paths_utils import set_up_logging
+from bleurt import score
+
 
 def evaluate_model_on_testset(model: nn.Module, test_loader: DataLoader, device: str, model_flag: str):
     set_up_logging(log_file_name=f"{model_flag}_bleurt_eval_log.txt")
+    scores = []
+
+    # init bleurt model
+    checkpoint = "bleurt/bleurt/BLEURT-20"
+    scorer = score.BleurtScorer(checkpoint)
 
     model.eval()
     for i, (questions, answers) in enumerate(test_loader):
@@ -21,14 +28,19 @@ def evaluate_model_on_testset(model: nn.Module, test_loader: DataLoader, device:
             answer = llm_pipe.get_answer(question)
             gen_answers.append(answer)
 
-        checkpoint = "bleurt/test_checkpoint"
+        batch_scores = scorer.score(references=answers, candidates=gen_answers)
 
-        scorer = score.BleurtScorer(checkpoint)
-        scores = scorer.score(references=answers, candidates=gen_answers)
-        print(scores)
+        scores.append(batch_scores)
+        log_message = f"\nScores: {batch_scores}"
+        logging.info(log_message)
+        print(log_message)
 
-    # logging.info(log_message)
-    # print(log_message)
+    avg_score = np.mean(np.array(scores))
+
+    log_message = f"\nAverage Score: {avg_score}"
+    logging.info(log_message)
+    print(log_message)
+
 
 
 if __name__ == "__main__":

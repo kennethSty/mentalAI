@@ -4,6 +4,7 @@ from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.prompts import PromptTemplate
 from typing import Dict
+from transformers import pipeline
 
 from src._1_chroma_preparation.embed_utils import EmbeddingFunction
 from src._1_chroma_preparation.chroma_utils import ChromaCollectionManager
@@ -31,9 +32,13 @@ class ChatPipeline:
             collection_embed_dict=collection_embed_dict
         )
         self.suicide_classifier = self.__init_suicide_classifier(model_name = "gpt2")
+        self.emotion_classifier = pipeline("text-classification", model="tabularisai/multilingual-sentiment-analysis")
 
     def get_answer(self, question: str):
         suicide_risk = self.suicide_classifier.classify(question)
+        emotion = self.emotion_classifier(question[:512])
+        print(f"\nEmotion: {emotion}")
+
         top_pubmed_docs = self.collection_dict["pubmed_collection"]\
             .max_marginal_relevance_search(question, k=self.top_k)
         top_conv_docs = self.collection_dict["conv_collection"]\
@@ -46,10 +51,11 @@ class ChatPipeline:
         top_k_conversations = "\n\n".join(top_k_conversations)
 
         answer = self.chain.invoke({
-                # "top_k_abstracts": top_k_abstracts,
-                # "top_k_conversations": top_k_conversations,
-                # "suicide_risk": suicide_risk,
-                "user_query": question
+                "top_k_abstracts": top_k_abstracts,
+                "top_k_conversations": top_k_conversations,
+                "suicide_risk": suicide_risk,
+                "emotion": emotion,
+                "user_query": question,
         })
         return answer
 

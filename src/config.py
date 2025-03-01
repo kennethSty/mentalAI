@@ -27,7 +27,7 @@ FINETUNE_CONFIG = {
 }
 
 FINETUNE_EVAL_CONFIG = {
-    "batch_size": 8,
+    "batch_size": 2,
     "num_eval_batches": 100,
 }
 

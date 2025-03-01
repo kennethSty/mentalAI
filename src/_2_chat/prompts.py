@@ -8,18 +8,21 @@ def get_prompt():
     
     #### **Scientific Research**
     Summaries of relevant mental health studies:
-    
+    {top_k_abstracts}
     
     #### **Example Counseling Responses**
     How other professional counselors have answered similar questions:
-    
+    {top_k_conversations}
     
     #### **Users Mental Health Status**
-    The users suicide risk is classified as: 
+    The users suicide risk is classified as: {suicide_risk}
+
+    ### **Users Current Emotion**
+    The users current emotion is classified as: {emotion}
     
     **Now, respond to the user's last response in a warm, supportive, and evidence-based way. 
-    Only print your response. Nothing else.** 
-    
+    Only print your response. Nothing else.**
+
     **Users last response:** {user_query}
     """
     return prompt
