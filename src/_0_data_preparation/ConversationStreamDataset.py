@@ -5,13 +5,13 @@ from src.utils.csv_utils import CSVUtils
 from src._0_data_preparation.Tokenizer import Tokenizer
 
 def wrapper(gen):
-  while True:
-    try:
-      yield next(gen)
-    except StopIteration:
-      break
-    except Exception as e:
-      print(e)
+    while True:
+        try:
+            yield next(gen)
+        except StopIteration:
+            break
+        except Exception as e:
+            print(e)
 
 class ConversationStreamDataset(IterableDataset):
     """

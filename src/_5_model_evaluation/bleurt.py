@@ -40,11 +40,14 @@ def evaluate_model_on_testset(model: nn.Module, test_loader: DataLoader, device:
         logging.info(log_message)
         print(log_message)
 
-    avg_score = np.mean(np.array(scores))
+    scores = np.array(scores)
+    avg_score = np.mean(scores)
 
     log_message = f"\nAverage Score: {avg_score}"
     logging.info(log_message)
     print(log_message)
+
+    np.save_text("logs/bleurt_eval_scores.txt", scores)
 
 
 
