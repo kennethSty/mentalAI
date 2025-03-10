@@ -4,6 +4,15 @@ from torch.utils.data import IterableDataset, Dataset
 from src.utils.csv_utils import CSVUtils
 from src._0_data_preparation.Tokenizer import Tokenizer
 
+def wrapper(gen):
+  while True:
+    try:
+      yield next(gen)
+    except StopIteration:
+      break
+    except Exception as e:
+      print(e)
+
 class ConversationStreamDataset(IterableDataset):
     """
     Iterable finetuning dataset used for training with lazy loading.
@@ -20,7 +29,7 @@ class ConversationStreamDataset(IterableDataset):
 
     def __iter__(self):
         with open(self.csv_file_path, "r") as input_csv:
-            reader = csv.DictReader(input_csv)
+            reader = wrapper(csv.DictReader(input_csv))
             for i, row in enumerate(reader):
                 question = row["question(s)"]
                 answer = row["answer(s)"]

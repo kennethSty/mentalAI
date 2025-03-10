@@ -18,7 +18,7 @@ def check_and_create_directories(paths_to_check: List[Path]):
     return
 
 def set_up_logging(log_file_name: str):
-    log_dir = Path("../../logs")
+    log_dir = Path("logs")
     log_dir.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
 
     log_filename = log_dir / str(log_file_name + f"_{datetime.now().strftime('%Y-%m-%d')}")

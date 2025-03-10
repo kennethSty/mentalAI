@@ -25,7 +25,12 @@ def evaluate_model_on_testset(model: nn.Module, test_loader: DataLoader, device:
 
         gen_answers = []
         for question in questions:
-            answer = llm_pipe.get_answer(question)
+            try:
+                answer = llm_pipe.get_answer(question)
+            except Exception as e:
+                print(e)
+                answer = ""
+
             gen_answers.append(answer)
 
         batch_scores = scorer.score(references=answers, candidates=gen_answers)
