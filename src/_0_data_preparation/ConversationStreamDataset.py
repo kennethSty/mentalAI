@@ -28,7 +28,7 @@ class ConversationStreamDataset(IterableDataset):
         self.pad_token_id = tokenizer.get_pad_token_id()
 
     def __iter__(self):
-        with open(self.csv_file_path, "r") as input_csv:
+        with open(self.csv_file_path, "r", encoding='utf-8') as input_csv:
             reader = wrapper(csv.DictReader(input_csv))
             for i, row in enumerate(reader):
                 question = row["question(s)"]

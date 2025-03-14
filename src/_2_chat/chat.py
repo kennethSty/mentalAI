@@ -6,7 +6,7 @@ from src._2_chat.prompts import get_prompt
 from langchain.prompts import PromptTemplate
 
 def init_conversation(device):
-    top_k = 1
+    top_k = 0
     collection_embed_dict = init_collections()
     prompt = PromptTemplate(
         template=get_prompt(),

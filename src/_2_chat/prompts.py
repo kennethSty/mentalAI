@@ -25,4 +25,13 @@ def get_prompt():
 
     **Users last response:** {user_query}
     """
+    # prompt = """
+    # You are HEALTHMATE. A highly experienced mental health AI therapist. Your task is to provide a professional, empathetic, and well-informed response to the user.
+    
+    # **Respond to the user's last response in a warm, supportive, and evidence-based way. 
+    # Only print your response. Nothing else.**
+
+    # **Users last response:** {user_query}
+    # """
+
     return prompt

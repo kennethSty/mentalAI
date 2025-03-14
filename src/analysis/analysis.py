@@ -114,3 +114,7 @@ if __name__ == "__main__":
         "data/02_train_test_splits/test/counsel_conversations_test.csv",
         "data/02_train_test_splits/train/counsel_conversations_train.csv",
     ], col_name="question_answer_pair(s)", out="plots/wordcloud_conv.png")
+
+    publication_dates()
+
+    ratio_human_synthetic()

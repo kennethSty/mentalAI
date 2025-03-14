@@ -18,10 +18,10 @@ def evaluate_model_on_testset(model: nn.Module, test_loader: DataLoader, device:
     # init bleurt model
     checkpoint = "bleurt/bleurt/BLEURT-20"
     scorer = score.BleurtScorer(checkpoint)
+    llm_pipe = init_conversation(device=device)
 
     model.eval()
     for i, (questions, answers) in enumerate(test_loader):
-        llm_pipe = init_conversation(device=device)
 
         gen_answers = []
         for question in questions:
