@@ -40,14 +40,15 @@ conda activate mentalai_env
 pip install -r requirements.txt  
 ```
 
-### **4. Llama.cpp GPU installation: s**  
+### **4. Llama.cpp GPU installation:**  
 Follow the latest instructions [here](https://python.langchain.com/docs/integrations/llms/llamacpp/#installation). 
 
 
-### **5. Setup data and models **  
+### **5. Setup data and models**  
 Place the folders available on [this google drive for the models](https://drive.google.com/drive/folders/13wcdsFVJpqAFZ9FG5u0nR--RTGCrlzU6?dmr=1&ec=wgc-drive-globalnav-goto) and this google drive for the data(TODO Ole: add the link to the data folder that includes the full chromastore)in the root directory. If your project root (like ours is called mental AI, place the folders within the mentalAI folder).
+If links to the data folders are incomplete or outdated please contact [Ole Plechinger](mailto:ole.plechinger@protonmail.com).
 
-### **6. Chatting with the bot ** 
+### **6. Chatting with the bot** 
 Go to `src/_2_chat/chat.py`, execute the script and chat away! 
 
 ```bash
@@ -56,23 +57,23 @@ python chat.py
 
 ## Optional reproduction of our set up
 
-### **1. Rerun data extraction (optional) **
+### **1. Rerun data extraction (optional)**
 If you want to reproduce the data extraction process, go to `src/_0_data_preparation/extract_pubmed.py` and execute the script. 
 Similarly run the `collect_counsel_datasets.py` and the `merge_counsel_datasets.py` files
 
-### **2. Rerun data embedding (optional) **
+### **2. Rerun data embedding (optional)**
 If you want to reproduce the embedding process, go to `src/_1_chroma_preparation/doc2vec.py` and execute the script.
 
-### **3. Rerun chroma upsert (optional) **
+### **3. Rerun chroma upsert (optional)**
 If you want to reproduce the embedding process, go to `src/_1_chroma_preparation/vec2chroma.py` and execute the script.
 
-### **4. Rerun GPT2 finetuning (optional) **
+### **4. Rerun GPT2 finetuning (optional)**
 If you want to reproduce the finetuning process, go to `src/_4_model_finetuning/finetuning.py` and execute the script.
 
-### **5. Reproduce Finetuning evaluation GPT2 finetuning (optional) **
+### **5. Reproduce Finetuning evaluation GPT2 finetuning (optional)**
 Make sure a finetuned model checkpoint exists in the models/finetuned directory. For the exact reproduction of our results, use `models/finetuned/gpt2_checkpoints/checkpoint_step_8000.pth`. Then, go to `src/_4_model_finetuning/finetuning.py` and execute the script.
 
-### **6. Reproduce system evaluation (optional) **
+### **6. Reproduce system evaluation (optional)**
 TODO Ole: Add usage of the evaluation script
 
 
