@@ -3,7 +3,68 @@
 
 MentalAI is a retrieval-augmented system for mental health support with fine-tuned suicide prediction. It leverages **llama.cpp**, reverse engineered **GPT2** and **LangChain** to provide AI-assisted conversations based on retrieved contextual information. The overall idea is to combine clinical expert knowledge with empathy and therapeutical experience by combining finetuned emotion and suicidality classifiers with academic, therapeutic and conversational knowledge documents.  
 
-Here’s a more concise version of the contributions section, focusing on the tech stack:
+The following shows an example run of the chatbot:
+```
+             |
+           \\|//
+           \\|//
+          \\\|///
+          \\\|///
+           \\|//
+            \|/
+             |
+
+      ________________________________________________________________________________________________________________________
+      Hi I am HealthMate and happy to support you to be at your best
+      What is on your mind lately!
+      ________________________________________________________________________________________________________________________
+Your question: why do i not have appetite in the morning?
+      ________________________________________________________________________________________________________________________
+       It's not uncommon for people to experience changes in appetite, including a lack of interest in food, especially during times-
+       of stress or emotional upset. There are several possible reasons why you might be experiencing this symptom, including depression,-
+       anxiety, or certain medication side effects. However, it's important to note that a lack of appetite can also-
+       be a sign of other underlying medical conditions, such as hypothyroidism or diabetes. If you are concerned about your app-
+      etite or any other symptoms, I would encourage you to speak with a healthcare professional for further evaluation and support. In-
+       the meantime, here are some strategies that may help improve your appetite:
+    1. Practice relaxation techniques, such as deep breathing or progressive muscle relaxation, to help manage stress-
+       and anxiety.
+    2. Engage in activities that you enjoy and that can help take your mind off of any negative thoughts or feelings.
+    3. Try to eat small, frequent meals throughout the day to help maintain your energy levels and prevent extreme hunger.
+    4. Consider seeking support from friends, family, or a mental health professional. Talking through your feelings with someone who
+       cares about you can be very helpful in managing emotional distress.
+    5. Get enough sleep each night. Lack of sleep can affect appetite and overall well-being. Aim for 7-8 hours of sleep per night and try 
+       to establish a consistent sleep routine.
+    I hope these suggestions are helpful. Remember, it's important to take care of yourself both physically and emotionally-
+       during this time. Don't hesitate to reach out if you need further support or guidance.
+
+      ________________________________________________________________________________________________________________________
+Your question: But even if I try to relax with breating techniques, I get stressed as soon as I want to reach some goals. Then I have problems with my appetite again which leads to even more stress since gaining weight and muscle is important to me. How can I break this vicious cycle?
+      ________________________________________________________________________________________________________________________
+
+    Oh, my dear.  It sounds like you are caught in a bit of a cycle there! 😔 I completely understand-
+       how difficult it can be to break free from these types of patterns, especially when they are deeply ingrained.  But don't-
+       worry, you are not alone in this struggle! 🤗 There are many evidence-based techniques and strategies that can help you manage-
+       stress and anxiety, and ultimately break this cycle. 💪
+
+    First of all, let's start by acknowledging that you are already taking steps towards making changes. 👏 By recognizing-
+       your triggers and being mindful of them, you are well on your way to developing coping mechanisms that will serve you well in-
+       the long run. 💪
+
+    One strategy that may be helpful for you is called "grounding." Grounding techniques involve focusing your attention on the present 
+       moment, and using your senses to anchor yourself in a sense of safety and calm. 🌱 For example, you could try paying-
+       attention to the sensation of your feet on the ground, or the sounds around you. This can help shift your focus away from stress-
+       ful thoughts and emotions, and towards a more neutral or positive state. 😊
+
+    Another strategy that may be helpful is called "cognitive reappraisal." This involves identifying negative thoughts and re-
+       framing them in a more positive light. For example, instead of thinking "I'm so stressed out, I'll-
+       never reach my goals," you could reframe it as "I'm feeling stressed right now, but I can handle it.-
+       I've made progress towards my goals before, and I can do it again." 💪
+
+     Finally, it may be helpful to practice self-compassion. This involves treating yourself with kindness and understanding,-
+       rather than criticism or judgment. When you make mistakes or have setback
+
+      ________________________________________________________________________________________________________________________
+```
 
 ## **Contributions**  
 
