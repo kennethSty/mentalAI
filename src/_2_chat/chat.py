@@ -1,7 +1,10 @@
+import asyncio
+
 from src._2_chat.ChatPipeline import ChatPipeline
 from src.utils.gpu_utils import DeviceManager
 from src._1_chroma_preparation.embed_utils import EmbeddingFunction, MiniLML6, PubMedBert
 from src._2_chat.prompts import get_prompt
+from src.utils.UI import print_greeting, print_farewell, print_separator, print_newline_separator
 
 from langchain.prompts import PromptTemplate
 
@@ -23,10 +26,14 @@ def chat():
         prompt = prompt,
     )
 
+    print_greeting()
     question = input("Your question: ")
     while (question.strip().lower() != "/exit"):
+        print_separator()
         llm_pipe.get_answer(question)
+        print_newline_separator()
         question = input("Your question: ")
+    print_farewell()
 
 
 def init_collections():
