@@ -5,13 +5,15 @@ import numpy as np
 
 class EmbedModelWrapper:
     """ Super Class Wrapping around a sentence transformer embedding model """
-    def __init__(self, device, model, max_seq_length):
-        print("Initializing Embedder")
+    def __init__(self, device, model, max_seq_length, verbose=False):
+        if verbose:
+            print("Initializing Embedder")
         self.device = device
         self.model = model
         if max_seq_length:
             self.model.max_seq_length = max_seq_length
-        print("Embedder initialized")
+        if verbose:
+            print("Embedder initialized")
 
     def encode(self, doc_batch):
         """ Embeds a batch of documents """

@@ -1,9 +1,10 @@
 import torch
 
 class DeviceManager:
-    def __init__(self):
+    def __init__(self, verbose=False):
         self.device = self.set_device()
-        print("Using device:", self.device)
+        if verbose:
+            print("Using device:", self.device)
 
     def set_device(self):
         device = "cpu"

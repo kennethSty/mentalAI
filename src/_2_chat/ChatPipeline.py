@@ -1,4 +1,4 @@
-import torch
+import asyncio
 from langchain_community.llms import LlamaCpp
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
@@ -10,6 +10,7 @@ from src._1_chroma_preparation.chroma_utils import ChromaCollectionManager
 from src._3_model_preparation.emobert_architecture.EmoBertClassifier import EmoBertClassifier
 from src._3_model_preparation.gpt_architecture.GPTClassifier import GPTClassifier
 from src._3_model_preparation.psychbert_architecture.PsychBertClassifier import PsychBertClassifier
+from src.utils.UI import PrettyStdOutCallbackHandler
 from src._5_model_evaluation.evaluation_utils import load_finetuned_model
 from src.utils.gpu_utils import DeviceManager
 
@@ -38,19 +39,15 @@ class ChatPipeline:
             .max_marginal_relevance_search(question, k=self.top_k)
         top_conv_docs = self.collection_dict["conv_collection"]\
             .max_marginal_relevance_search(question, k=self.top_k)
-
-        top_k_abstracts = [doc.page_content for doc in top_pubmed_docs]
-        top_k_conversations = [doc.page_content for doc in top_conv_docs]
-
-        top_k_abstracts = "\n\n".join(top_k_abstracts)
-        top_k_conversations = "\n\n".join(top_k_conversations)
+        top_k_abstracts = "\n\n".join(doc.page_content for doc in top_pubmed_docs)
+        top_k_conversations = "\n\n".join(doc.page_content for doc in top_conv_docs)
 
         answer = self.chain.invoke({
-                "top_k_abstracts": top_k_abstracts,
-                "top_k_conversations": top_k_conversations,
-                "suicide_risk": suicide_risk,
-                "user_query": question
-        })
+                    "top_k_abstracts": top_k_abstracts,
+                    "top_k_conversations": top_k_conversations,
+                    "suicide_risk": suicide_risk,
+                    "user_query": question
+            })
         return answer
 
     def __init_suicide_classifier(self, model_name: str):
@@ -85,7 +82,7 @@ class ChatPipeline:
             n_batch=512,
             verbose=True,
     ):
-        callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
+        callback_manager = CallbackManager([PrettyStdOutCallbackHandler()])
         llm = LlamaCpp(
             model_path=model_path,
             temperature=temperature,
