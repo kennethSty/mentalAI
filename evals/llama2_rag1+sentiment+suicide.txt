@@ -1,0 +1,1554 @@
+2025-03-11 03:55:19 - WARNING - From C:\Users\Ole Plechinger\AppData\Roaming\Python\Python312\site-packages\bleurt\score.py:160: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+2025-03-11 03:55:19 - INFO - Reading checkpoint bleurt/bleurt/BLEURT-20.
+2025-03-11 03:55:19 - INFO - Config file found, reading.
+2025-03-11 03:55:19 - INFO - Will load checkpoint BLEURT-20
+2025-03-11 03:55:19 - INFO - Loads full paths and checks that files exists.
+2025-03-11 03:55:19 - INFO - ... name:BLEURT-20
+2025-03-11 03:55:19 - INFO - ... bert_config_file:bert_config.json
+2025-03-11 03:55:19 - INFO - ... max_seq_length:512
+2025-03-11 03:55:19 - INFO - ... vocab_file:None
+2025-03-11 03:55:19 - INFO - ... do_lower_case:None
+2025-03-11 03:55:19 - INFO - ... sp_model:sent_piece
+2025-03-11 03:55:19 - INFO - ... dynamic_seq_length:True
+2025-03-11 03:55:19 - INFO - Creating BLEURT scorer.
+2025-03-11 03:55:19 - INFO - Creating SentencePiece tokenizer.
+2025-03-11 03:55:19 - INFO - Creating SentencePiece tokenizer.
+2025-03-11 03:55:19 - INFO - Will load model: bleurt/bleurt/BLEURT-20\sent_piece.model.
+2025-03-11 03:55:19 - INFO - SentencePiece tokenizer created.
+2025-03-11 03:55:19 - INFO - Creating Eager Mode predictor.
+2025-03-11 03:55:19 - INFO - Loading model.
+2025-03-11 03:55:23 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-03-11 03:55:23 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-03-11 03:55:23 - INFO - BLEURT initialized.
+2025-03-11 03:55:23 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 03:55:26 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 03:55:33 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-03-11 03:57:41 - INFO - 
+Scores: [0.5536892414093018, 0.36628323793411255]
+2025-03-11 03:57:41 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 03:57:43 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 03:59:00 - INFO - 
+Scores: [0.4277297854423523, 0.4679369330406189]
+2025-03-11 03:59:00 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 03:59:02 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:00:22 - INFO - 
+Scores: [0.46631550788879395, 0.526515781879425]
+2025-03-11 04:00:22 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:00:26 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:01:30 - INFO - 
+Scores: [0.4346732497215271, 0.4505416750907898]
+2025-03-11 04:01:30 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:01:32 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:02:47 - INFO - 
+Scores: [0.32005825638771057, 0.4911755919456482]
+2025-03-11 04:02:47 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:02:48 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:04:18 - INFO - 
+Scores: [0.44529950618743896, 0.48158228397369385]
+2025-03-11 04:04:18 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:04:21 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:05:41 - INFO - 
+Scores: [0.5071716904640198, 0.3717239499092102]
+2025-03-11 04:05:41 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:05:49 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:07:11 - INFO - 
+Scores: [0.5114139318466187, 0.44444739818573]
+2025-03-11 04:07:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:07:20 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:08:46 - INFO - 
+Scores: [0.402294397354126, 0.4908527135848999]
+2025-03-11 04:08:46 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:08:48 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:10:14 - INFO - 
+Scores: [0.3393891453742981, 0.48658961057662964]
+2025-03-11 04:10:14 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:10:16 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:11:23 - INFO - 
+Scores: [0.4539170265197754, 0.41666269302368164]
+2025-03-11 04:11:23 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:11:25 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:12:57 - INFO - 
+Scores: [0.4141671657562256, 0.3742184638977051]
+2025-03-11 04:12:57 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:12:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:14:56 - INFO - 
+Scores: [0.40348684787750244, 0.3955346941947937]
+2025-03-11 04:14:56 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:15:00 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:16:40 - INFO - 
+Scores: [0.3281329870223999, 0.3981267809867859]
+2025-03-11 04:16:40 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:16:42 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:18:33 - INFO - 
+Scores: [0.45920711755752563, 0.5031254887580872]
+2025-03-11 04:18:33 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:18:35 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:20:17 - INFO - 
+Scores: [0.5241528749465942, 0.4381428360939026]
+2025-03-11 04:20:17 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:20:19 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:22:03 - INFO - 
+Scores: [0.4219549298286438, 0.38095301389694214]
+2025-03-11 04:22:03 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:22:05 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:23:43 - INFO - 
+Scores: [0.5348338484764099, 0.11046972870826721]
+2025-03-11 04:23:43 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:23:45 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:25:28 - INFO - 
+Scores: [0.3331848382949829, 0.3032802939414978]
+2025-03-11 04:25:28 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:25:30 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:26:32 - INFO - 
+Scores: [0.4960978031158447, 0.3933109641075134]
+2025-03-11 04:26:32 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:26:34 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:28:26 - INFO - 
+Scores: [0.49231427907943726, 0.41177284717559814]
+2025-03-11 04:28:26 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:28:28 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:31:07 - INFO - 
+Scores: [0.4125217795372009, 0.3237383961677551]
+2025-03-11 04:31:07 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:31:09 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:32:11 - INFO - 
+Scores: [0.3757418990135193, 0.2908666729927063]
+2025-03-11 04:32:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:32:14 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:33:57 - INFO - 
+Scores: [0.4278256297111511, 0.45711207389831543]
+2025-03-11 04:33:57 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:33:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:35:17 - INFO - 
+Scores: [0.1358940601348877, 0.46555691957473755]
+2025-03-11 04:35:17 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:35:20 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:36:45 - INFO - 
+Scores: [0.48412787914276123, 0.4506068825721741]
+2025-03-11 04:36:45 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:36:47 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:38:15 - INFO - 
+Scores: [0.5113682746887207, 0.23183679580688477]
+2025-03-11 04:38:15 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:38:17 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:39:51 - INFO - 
+Scores: [0.4431018829345703, 0.3961479067802429]
+2025-03-11 04:39:51 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:39:54 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:41:36 - INFO - 
+Scores: [0.4255827069282532, 0.4282901883125305]
+2025-03-11 04:41:36 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:41:39 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:42:30 - INFO - 
+Scores: [0.2662848234176636, 0.5228968858718872]
+2025-03-11 04:42:30 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:42:33 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:44:06 - INFO - 
+Scores: [0.43646275997161865, 0.427132248878479]
+2025-03-11 04:44:06 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:44:09 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:45:56 - INFO - 
+Scores: [0.44258958101272583, 0.5243903994560242]
+2025-03-11 04:45:56 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:46:00 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:47:17 - INFO - 
+Scores: [0.3553493022918701, 0.2592001259326935]
+2025-03-11 04:47:17 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:47:19 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:49:17 - INFO - 
+Scores: [0.4341573119163513, 0.3849579095840454]
+2025-03-11 04:49:17 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:49:19 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:50:47 - INFO - 
+Scores: [0.3850252032279968, 0.4773082137107849]
+2025-03-11 04:50:47 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:50:51 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:52:33 - INFO - 
+Scores: [0.4573368430137634, 0.3969918489456177]
+2025-03-11 04:52:33 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:52:35 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:53:51 - INFO - 
+Scores: [0.40050387382507324, 0.5083955526351929]
+2025-03-11 04:53:51 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:54:00 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:55:29 - INFO - 
+Scores: [0.412301242351532, 0.4078276753425598]
+2025-03-11 04:55:29 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:55:31 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:57:28 - INFO - 
+Scores: [0.42927467823028564, 0.4391636848449707]
+2025-03-11 04:57:28 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:57:31 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 04:59:57 - INFO - 
+Scores: [0.4799736738204956, 0.4554048776626587]
+2025-03-11 04:59:57 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 04:59:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:02:04 - INFO - 
+Scores: [0.4671633243560791, 0.5614447593688965]
+2025-03-11 05:02:04 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:02:18 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:03:33 - INFO - 
+Scores: [0.2303227186203003, 0.4194592833518982]
+2025-03-11 05:03:33 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:03:35 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:05:11 - INFO - 
+Scores: [0.39383405447006226, 0.06496087461709976]
+2025-03-11 05:05:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:05:13 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:06:42 - INFO - 
+Scores: [0.4154614806175232, 0.43742436170578003]
+2025-03-11 05:06:42 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:06:45 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:07:59 - INFO - 
+Scores: [0.2478450983762741, 0.5759754776954651]
+2025-03-11 05:07:59 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:08:01 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:10:02 - INFO - 
+Scores: [0.42207664251327515, 0.5063355565071106]
+2025-03-11 05:10:02 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:10:04 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:11:34 - INFO - 
+Scores: [0.4430317282676697, 0.3881845474243164]
+2025-03-11 05:11:34 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:11:37 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:13:15 - INFO - 
+Scores: [0.4837023615837097, 0.3978922963142395]
+2025-03-11 05:13:15 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:13:23 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:14:42 - INFO - 
+Scores: [0.33445852994918823, 0.5346836447715759]
+2025-03-11 05:14:42 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:14:44 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:16:34 - INFO - 
+Scores: [0.45837831497192383, 0.5513190627098083]
+2025-03-11 05:16:35 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:16:40 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:17:54 - INFO - 
+Scores: [0.3647884726524353, 0.2575608789920807]
+2025-03-11 05:17:54 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:17:57 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:19:24 - INFO - 
+Scores: [0.4413388967514038, 0.4376794695854187]
+2025-03-11 05:19:24 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:19:27 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:20:48 - INFO - 
+Scores: [0.4743415117263794, 0.3692227900028229]
+2025-03-11 05:20:48 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:20:51 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:22:37 - INFO - 
+Scores: [0.5248644351959229, 0.4302825331687927]
+2025-03-11 05:22:37 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:22:43 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:24:23 - INFO - 
+Scores: [0.24915368854999542, 0.3214380145072937]
+2025-03-11 05:24:23 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:24:25 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:26:04 - INFO - 
+Scores: [0.47963380813598633, 0.3884219825267792]
+2025-03-11 05:26:04 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:26:07 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:27:44 - INFO - 
+Scores: [0.48210811614990234, 0.4989526867866516]
+2025-03-11 05:27:44 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:27:48 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:28:52 - INFO - 
+Scores: [0.1541241556406021, 0.4771316647529602]
+2025-03-11 05:28:52 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:28:55 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:30:22 - INFO - 
+Scores: [0.47071099281311035, 0.3979882597923279]
+2025-03-11 05:30:22 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:30:24 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:32:29 - INFO - 
+Scores: [0.49116772413253784, 0.4710043668746948]
+2025-03-11 05:32:29 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:32:32 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:34:12 - INFO - 
+Scores: [0.27229201793670654, 0.3541133403778076]
+2025-03-11 05:34:12 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:34:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:36:11 - INFO - 
+Scores: [0.49940866231918335, 0.3905261754989624]
+2025-03-11 05:36:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:36:14 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:37:52 - INFO - 
+Scores: [0.33909064531326294, 0.44870126247406006]
+2025-03-11 05:37:52 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:37:54 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:39:42 - INFO - 
+Scores: [0.34132975339889526, 0.4038134813308716]
+2025-03-11 05:39:43 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:39:45 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:41:54 - INFO - 
+Scores: [0.47766417264938354, 0.469981849193573]
+2025-03-11 05:41:54 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:41:58 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:43:44 - INFO - 
+Scores: [0.5421580076217651, 0.3722043037414551]
+2025-03-11 05:43:45 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:43:47 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:45:10 - INFO - 
+Scores: [0.4381147623062134, 0.43334710597991943]
+2025-03-11 05:45:10 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:45:13 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:46:36 - INFO - 
+Scores: [0.3664499521255493, 0.491649329662323]
+2025-03-11 05:46:36 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:46:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:48:18 - INFO - 
+Scores: [0.24693331122398376, 0.45785993337631226]
+2025-03-11 05:48:18 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:48:24 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:50:08 - INFO - 
+Scores: [0.42886435985565186, 0.3210332691669464]
+2025-03-11 05:50:08 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:50:10 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:51:26 - INFO - 
+Scores: [0.39974451065063477, 0.268734872341156]
+2025-03-11 05:51:26 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:51:31 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:53:15 - INFO - 
+Scores: [0.4147629737854004, 0.3905261754989624]
+2025-03-11 05:53:15 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:53:18 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:54:49 - INFO - 
+Scores: [0.45136791467666626, 0.5288976430892944]
+2025-03-11 05:54:49 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:54:51 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:57:01 - INFO - 
+Scores: [0.4130614995956421, 0.5103064179420471]
+2025-03-11 05:57:01 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:57:03 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:58:11 - INFO - 
+Scores: [0.4955003261566162, 0.17531614005565643]
+2025-03-11 05:58:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:58:13 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 05:59:54 - INFO - 
+Scores: [0.3998950719833374, 0.3975600600242615]
+2025-03-11 05:59:54 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 05:59:56 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:01:36 - INFO - 
+Scores: [0.40774911642074585, 0.453391969203949]
+2025-03-11 06:01:36 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:01:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:03:12 - INFO - 
+Scores: [0.4099864959716797, 0.40830302238464355]
+2025-03-11 06:03:12 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:03:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:04:51 - INFO - 
+Scores: [0.4296950101852417, 0.49148446321487427]
+2025-03-11 06:04:51 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:04:54 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:06:38 - INFO - 
+Scores: [0.49015480279922485, 0.4855272173881531]
+2025-03-11 06:06:38 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:06:44 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:08:15 - INFO - 
+Scores: [0.342087984085083, 0.3291597068309784]
+2025-03-11 06:08:15 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:08:17 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:10:09 - INFO - 
+Scores: [0.4614008069038391, 0.4503440260887146]
+2025-03-11 06:10:09 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:10:11 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:12:11 - INFO - 
+Scores: [0.37688857316970825, 0.4116182327270508]
+2025-03-11 06:12:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:12:13 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:13:51 - INFO - 
+Scores: [0.5341504812240601, 0.5063768625259399]
+2025-03-11 06:13:51 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:13:53 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:14:45 - INFO - 
+Scores: [0.40251731872558594, 0.11709580570459366]
+2025-03-11 06:14:45 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:14:47 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:16:38 - INFO - 
+Scores: [0.40471041202545166, 0.507682204246521]
+2025-03-11 06:16:38 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:16:43 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:18:43 - INFO - 
+Scores: [0.3953068256378174, 0.4756121039390564]
+2025-03-11 06:18:43 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:18:46 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:20:26 - INFO - 
+Scores: [0.34749525785446167, 0.3630650043487549]
+2025-03-11 06:20:26 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:20:28 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:22:11 - INFO - 
+Scores: [0.4206678867340088, 0.3821982145309448]
+2025-03-11 06:22:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:22:14 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:23:46 - INFO - 
+Scores: [0.41163069009780884, 0.39737796783447266]
+2025-03-11 06:23:46 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:23:49 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:25:25 - INFO - 
+Scores: [0.47033363580703735, 0.4681335687637329]
+2025-03-11 06:25:25 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:25:28 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:26:45 - INFO - 
+Scores: [0.390583872795105, 0.4593809247016907]
+2025-03-11 06:26:45 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:26:48 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:28:10 - INFO - 
+Scores: [0.45718127489089966, 0.45400381088256836]
+2025-03-11 06:28:10 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:28:12 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:29:36 - INFO - 
+Scores: [0.38793718814849854, 0.46984875202178955]
+2025-03-11 06:29:36 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:29:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:30:58 - INFO - 
+Scores: [0.46542853116989136, 0.28696757555007935]
+2025-03-11 06:30:58 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:31:00 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:32:35 - INFO - 
+Scores: [0.2742602229118347, 0.5070497989654541]
+2025-03-11 06:32:35 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:32:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:33:27 - INFO - 
+Scores: [0.29851433634757996, 0.4778393507003784]
+2025-03-11 06:33:27 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:33:30 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:34:39 - INFO - 
+Scores: [0.39233750104904175, 0.3806835412979126]
+2025-03-11 06:34:39 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:34:44 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:36:56 - INFO - 
+Scores: [0.24278473854064941, 0.43525266647338867]
+2025-03-11 06:36:56 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:36:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:38:32 - INFO - 
+Scores: [0.44790107011795044, 0.381415456533432]
+2025-03-11 06:38:32 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:38:34 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:40:09 - INFO - 
+Scores: [0.43570059537887573, 0.4485113024711609]
+2025-03-11 06:40:09 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:40:11 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:41:31 - INFO - 
+Scores: [0.30427587032318115, 0.44973844289779663]
+2025-03-11 06:41:32 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:41:34 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:43:21 - INFO - 
+Scores: [0.4582637548446655, 0.4845913052558899]
+2025-03-11 06:43:21 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:43:23 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:44:52 - INFO - 
+Scores: [0.5413989424705505, 0.4912577271461487]
+2025-03-11 06:44:53 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:44:55 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:46:19 - INFO - 
+Scores: [0.4156959056854248, 0.4213663935661316]
+2025-03-11 06:46:19 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:46:21 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:47:57 - INFO - 
+Scores: [0.42822110652923584, 0.34929561614990234]
+2025-03-11 06:47:57 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:47:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:49:28 - INFO - 
+Scores: [0.44585591554641724, 0.2847785949707031]
+2025-03-11 06:49:29 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:49:31 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:50:24 - INFO - 
+Scores: [0.2498990148305893, 0.4196198582649231]
+2025-03-11 06:50:24 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:50:27 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:52:10 - INFO - 
+Scores: [0.525446891784668, 0.5376725792884827]
+2025-03-11 06:52:10 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:52:12 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:54:08 - INFO - 
+Scores: [0.5309675335884094, 0.4679039716720581]
+2025-03-11 06:54:08 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:54:10 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:55:59 - INFO - 
+Scores: [0.43090367317199707, 0.4761996269226074]
+2025-03-11 06:55:59 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:56:01 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:57:29 - INFO - 
+Scores: [0.3793851137161255, 0.4847571849822998]
+2025-03-11 06:57:29 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:57:32 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 06:59:06 - INFO - 
+Scores: [0.41342127323150635, 0.43473464250564575]
+2025-03-11 06:59:06 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 06:59:09 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:00:46 - INFO - 
+Scores: [0.49350887537002563, 0.4812358617782593]
+2025-03-11 07:00:46 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:00:48 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:01:50 - INFO - 
+Scores: [0.4034718871116638, 0.24665461480617523]
+2025-03-11 07:01:50 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:01:54 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:03:28 - INFO - 
+Scores: [0.4486061930656433, 0.38618868589401245]
+2025-03-11 07:03:28 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:03:30 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:04:37 - INFO - 
+Scores: [0.09881865233182907, 0.4259578585624695]
+2025-03-11 07:04:37 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:04:40 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:06:10 - INFO - 
+Scores: [0.43330317735671997, 0.43209028244018555]
+2025-03-11 07:06:10 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:06:13 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:07:28 - INFO - 
+Scores: [0.41147541999816895, 0.3502325415611267]
+2025-03-11 07:07:28 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:07:31 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:08:59 - INFO - 
+Scores: [0.48455357551574707, 0.11376262456178665]
+2025-03-11 07:08:59 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:09:01 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:10:43 - INFO - 
+Scores: [0.4592803716659546, 0.4505189061164856]
+2025-03-11 07:10:43 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:10:46 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:12:30 - INFO - 
+Scores: [0.35993707180023193, 0.21977433562278748]
+2025-03-11 07:12:30 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:12:32 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:14:12 - INFO - 
+Scores: [0.44405829906463623, 0.4079917073249817]
+2025-03-11 07:14:12 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:14:14 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:15:57 - INFO - 
+Scores: [0.2914103865623474, 0.47206759452819824]
+2025-03-11 07:15:57 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:15:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:17:32 - INFO - 
+Scores: [0.4806064963340759, 0.4696961045265198]
+2025-03-11 07:17:32 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:17:40 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:18:20 - INFO - 
+Scores: [0.33250874280929565, 0.47152096033096313]
+2025-03-11 07:18:21 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:18:23 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:20:06 - INFO - 
+Scores: [0.4381313920021057, 0.41940218210220337]
+2025-03-11 07:20:06 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:20:08 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:21:55 - INFO - 
+Scores: [0.5268357992172241, 0.5206078886985779]
+2025-03-11 07:21:55 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:21:58 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:23:11 - INFO - 
+Scores: [0.339643657207489, 0.5247620344161987]
+2025-03-11 07:23:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:23:14 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:24:22 - INFO - 
+Scores: [0.23750026524066925, 0.47931230068206787]
+2025-03-11 07:24:22 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:24:28 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:26:09 - INFO - 
+Scores: [0.536562442779541, 0.5010725855827332]
+2025-03-11 07:26:09 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:26:12 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:27:59 - INFO - 
+Scores: [0.46035927534103394, 0.4568989872932434]
+2025-03-11 07:27:59 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:28:02 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:29:51 - INFO - 
+Scores: [0.4661858081817627, 0.4700961709022522]
+2025-03-11 07:29:51 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:29:53 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:31:45 - INFO - 
+Scores: [0.38885849714279175, 0.5021838545799255]
+2025-03-11 07:31:45 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:31:47 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:32:49 - INFO - 
+Scores: [0.3771740198135376, 0.49592918157577515]
+2025-03-11 07:32:49 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:32:52 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:34:38 - INFO - 
+Scores: [0.4788001775741577, 0.42693907022476196]
+2025-03-11 07:34:38 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:34:41 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:36:00 - INFO - 
+Scores: [0.4632805585861206, 0.43264782428741455]
+2025-03-11 07:36:00 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:36:02 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:37:24 - INFO - 
+Scores: [0.3296480178833008, 0.2908667325973511]
+2025-03-11 07:37:24 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:37:26 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:38:54 - INFO - 
+Scores: [0.45386624336242676, 0.5384519696235657]
+2025-03-11 07:38:54 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:38:56 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:40:58 - INFO - 
+Scores: [0.5069632530212402, 0.43844443559646606]
+2025-03-11 07:40:58 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:41:03 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:43:00 - INFO - 
+Scores: [0.4556562304496765, 0.4529739022254944]
+2025-03-11 07:43:01 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:43:03 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:44:18 - INFO - 
+Scores: [0.24329376220703125, 0.40447932481765747]
+2025-03-11 07:44:18 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:44:22 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:45:21 - INFO - 
+Scores: [0.4695068597793579, 0.2980925440788269]
+2025-03-11 07:45:21 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:45:35 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:47:29 - INFO - 
+Scores: [0.22761785984039307, 0.40889889001846313]
+2025-03-11 07:47:29 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:47:32 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:49:05 - INFO - 
+Scores: [0.4272891879081726, 0.32148510217666626]
+2025-03-11 07:49:05 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:49:08 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:51:13 - INFO - 
+Scores: [0.42899852991104126, 0.43563634157180786]
+2025-03-11 07:51:13 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:51:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:52:39 - INFO - 
+Scores: [0.40117180347442627, 0.3662192225456238]
+2025-03-11 07:52:39 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:52:41 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:54:40 - INFO - 
+Scores: [0.49450188875198364, 0.3453947901725769]
+2025-03-11 07:54:40 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:54:42 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:56:01 - INFO - 
+Scores: [0.4006216526031494, 0.4607318043708801]
+2025-03-11 07:56:01 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:56:03 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 07:58:39 - INFO - 
+Scores: [0.4918556809425354, 0.4037855267524719]
+2025-03-11 07:58:39 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 07:58:43 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:00:09 - INFO - 
+Scores: [0.3280578851699829, 0.5082842111587524]
+2025-03-11 08:00:10 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:00:14 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:02:27 - INFO - 
+Scores: [0.33360058069229126, 0.3464497923851013]
+2025-03-11 08:02:27 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:02:33 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:04:15 - INFO - 
+Scores: [0.46374011039733887, 0.542718768119812]
+2025-03-11 08:04:15 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:04:18 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:06:30 - INFO - 
+Scores: [0.4272891879081726, 0.46093589067459106]
+2025-03-11 08:06:30 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:06:33 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:08:20 - INFO - 
+Scores: [0.4284358620643616, 0.4476330876350403]
+2025-03-11 08:08:20 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:08:27 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:10:13 - INFO - 
+Scores: [0.29958420991897583, 0.40512120723724365]
+2025-03-11 08:10:13 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:10:16 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:11:38 - INFO - 
+Scores: [0.09781762212514877, 0.507145881652832]
+2025-03-11 08:11:38 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:11:40 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:13:04 - INFO - 
+Scores: [0.357621967792511, 0.40223032236099243]
+2025-03-11 08:13:04 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:13:07 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:14:50 - INFO - 
+Scores: [0.39189857244491577, 0.4281570315361023]
+2025-03-11 08:14:50 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:14:57 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:16:43 - INFO - 
+Scores: [0.40973252058029175, 0.4699898958206177]
+2025-03-11 08:16:43 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:16:45 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:18:31 - INFO - 
+Scores: [0.49889492988586426, 0.5362771153450012]
+2025-03-11 08:18:31 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:18:33 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:20:13 - INFO - 
+Scores: [0.07669033110141754, 0.43290334939956665]
+2025-03-11 08:20:13 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:20:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:21:35 - INFO - 
+Scores: [0.33131998777389526, 0.33474528789520264]
+2025-03-11 08:21:35 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:21:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:23:33 - INFO - 
+Scores: [0.528059720993042, 0.4993687868118286]
+2025-03-11 08:23:33 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:23:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:25:03 - INFO - 
+Scores: [0.41446125507354736, 0.47534555196762085]
+2025-03-11 08:25:03 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:25:08 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:26:47 - INFO - 
+Scores: [0.173732191324234, 0.42202913761138916]
+2025-03-11 08:26:48 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:26:50 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:27:49 - INFO - 
+Scores: [0.024887844920158386, 0.3148002028465271]
+2025-03-11 08:27:49 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:27:51 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:29:39 - INFO - 
+Scores: [0.5035474896430969, 0.447424054145813]
+2025-03-11 08:29:39 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:29:42 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:31:08 - INFO - 
+Scores: [0.35347509384155273, 0.4554932117462158]
+2025-03-11 08:31:08 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:31:11 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:32:16 - INFO - 
+Scores: [0.3776535987854004, 0.491649329662323]
+2025-03-11 08:32:16 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:32:19 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:34:02 - INFO - 
+Scores: [0.4982253313064575, 0.5485584139823914]
+2025-03-11 08:34:02 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:34:05 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:35:19 - INFO - 
+Scores: [0.14119407534599304, 0.5005820989608765]
+2025-03-11 08:35:19 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:35:21 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:37:19 - INFO - 
+Scores: [0.4812074303627014, 0.38119882345199585]
+2025-03-11 08:37:19 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:37:23 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:39:00 - INFO - 
+Scores: [0.3381139636039734, 0.41638219356536865]
+2025-03-11 08:39:00 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:39:02 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:40:30 - INFO - 
+Scores: [0.4534379839897156, 0.38851505517959595]
+2025-03-11 08:40:30 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:40:33 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:41:56 - INFO - 
+Scores: [0.48228543996810913, 0.39159709215164185]
+2025-03-11 08:41:57 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:41:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:43:41 - INFO - 
+Scores: [0.4435938596725464, 0.5681291818618774]
+2025-03-11 08:43:41 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:43:44 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:45:23 - INFO - 
+Scores: [0.3831526041030884, 0.40809690952301025]
+2025-03-11 08:45:23 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:45:26 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:47:28 - INFO - 
+Scores: [0.40395843982696533, 0.3210345506668091]
+2025-03-11 08:47:28 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:47:33 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:49:11 - INFO - 
+Scores: [0.3774322271347046, 0.4396243691444397]
+2025-03-11 08:49:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:49:13 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:51:05 - INFO - 
+Scores: [0.36792975664138794, 0.44462138414382935]
+2025-03-11 08:51:05 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:51:07 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:52:46 - INFO - 
+Scores: [0.46307873725891113, 0.5127897262573242]
+2025-03-11 08:52:46 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:52:49 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:54:08 - INFO - 
+Scores: [0.4444923400878906, 0.5398173928260803]
+2025-03-11 08:54:08 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:54:11 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:55:27 - INFO - 
+Scores: [0.4522796869277954, 0.43028968572616577]
+2025-03-11 08:55:27 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:55:30 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:56:48 - INFO - 
+Scores: [0.4490695595741272, 0.4912577271461487]
+2025-03-11 08:56:48 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:56:50 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:58:16 - INFO - 
+Scores: [0.09566424787044525, 0.3534955084323883]
+2025-03-11 08:58:16 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:58:18 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 08:59:56 - INFO - 
+Scores: [0.30804526805877686, 0.49291300773620605]
+2025-03-11 08:59:57 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 08:59:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:01:29 - INFO - 
+Scores: [0.45542746782302856, 0.5298622846603394]
+2025-03-11 09:01:29 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:01:31 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:03:02 - INFO - 
+Scores: [0.3692227005958557, 0.4520610570907593]
+2025-03-11 09:03:02 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:03:08 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:05:05 - INFO - 
+Scores: [0.46374011039733887, 0.43408751487731934]
+2025-03-11 09:05:06 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:05:08 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:07:10 - INFO - 
+Scores: [0.37080681324005127, 0.48983001708984375]
+2025-03-11 09:07:10 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:07:13 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:08:35 - INFO - 
+Scores: [0.38822758197784424, 0.33561718463897705]
+2025-03-11 09:08:35 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:08:37 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:09:59 - INFO - 
+Scores: [0.3472086191177368, 0.33560115098953247]
+2025-03-11 09:09:59 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:10:04 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:11:41 - INFO - 
+Scores: [0.49897104501724243, 0.37155914306640625]
+2025-03-11 09:11:41 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:11:43 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:13:38 - INFO - 
+Scores: [0.4582637548446655, 0.5045551657676697]
+2025-03-11 09:13:38 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:13:41 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:15:14 - INFO - 
+Scores: [0.4295511245727539, 0.2614804208278656]
+2025-03-11 09:15:14 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:15:17 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:17:21 - INFO - 
+Scores: [0.1770573854446411, 0.5207478404045105]
+2025-03-11 09:17:21 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:17:26 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:19:08 - INFO - 
+Scores: [0.48293566703796387, 0.46596401929855347]
+2025-03-11 09:19:08 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:19:10 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:20:44 - INFO - 
+Scores: [0.4103403687477112, 0.342254638671875]
+2025-03-11 09:20:44 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:20:47 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:22:52 - INFO - 
+Scores: [0.4315851330757141, 0.3130977153778076]
+2025-03-11 09:22:52 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:22:56 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:24:20 - INFO - 
+Scores: [0.447144091129303, 0.4926740527153015]
+2025-03-11 09:24:20 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:24:22 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:25:48 - INFO - 
+Scores: [0.4695678949356079, 0.3148002028465271]
+2025-03-11 09:25:48 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:25:52 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:27:28 - INFO - 
+Scores: [0.4204685688018799, 0.42990434169769287]
+2025-03-11 09:27:28 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:27:30 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:28:58 - INFO - 
+Scores: [0.33504945039749146, 0.3684828281402588]
+2025-03-11 09:28:58 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:29:00 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:30:14 - INFO - 
+Scores: [0.4856828451156616, 0.26489919424057007]
+2025-03-11 09:30:14 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:30:18 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:31:39 - INFO - 
+Scores: [0.47177237272262573, 0.41335707902908325]
+2025-03-11 09:31:39 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:31:41 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:33:44 - INFO - 
+Scores: [0.3531254529953003, 0.49265921115875244]
+2025-03-11 09:33:44 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:33:46 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:35:45 - INFO - 
+Scores: [0.3941526412963867, 0.4262499213218689]
+2025-03-11 09:35:45 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:35:50 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:37:19 - INFO - 
+Scores: [0.47769325971603394, -0.01640474796295166]
+2025-03-11 09:37:19 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:37:21 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:38:32 - INFO - 
+Scores: [0.45786046981811523, 0.26157164573669434]
+2025-03-11 09:38:32 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:38:34 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:39:55 - INFO - 
+Scores: [0.40006738901138306, 0.4849659204483032]
+2025-03-11 09:39:55 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:39:58 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:41:29 - INFO - 
+Scores: [0.4720364809036255, 0.38108402490615845]
+2025-03-11 09:41:29 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:41:31 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:43:27 - INFO - 
+Scores: [0.47058284282684326, 0.39350682497024536]
+2025-03-11 09:43:27 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:43:29 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:44:54 - INFO - 
+Scores: [0.43395060300827026, 0.33780837059020996]
+2025-03-11 09:44:54 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:44:56 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:46:16 - INFO - 
+Scores: [0.14844372868537903, 0.25177663564682007]
+2025-03-11 09:46:16 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:46:19 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:48:00 - INFO - 
+Scores: [0.4943292737007141, 0.3210345506668091]
+2025-03-11 09:48:00 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:48:04 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:49:29 - INFO - 
+Scores: [0.45802801847457886, 0.4657658338546753]
+2025-03-11 09:49:29 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:49:32 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:51:06 - INFO - 
+Scores: [0.4077411890029907, 0.44756531715393066]
+2025-03-11 09:51:06 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:51:08 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:52:54 - INFO - 
+Scores: [0.3539060354232788, 0.3678211569786072]
+2025-03-11 09:52:54 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:52:57 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:54:14 - INFO - 
+Scores: [0.4244852066040039, 0.5087795853614807]
+2025-03-11 09:54:15 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:54:17 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:56:16 - INFO - 
+Scores: [0.42995166778564453, 0.42043614387512207]
+2025-03-11 09:56:16 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:56:19 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:58:10 - INFO - 
+Scores: [0.4427333474159241, 0.3714476227760315]
+2025-03-11 09:58:10 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:58:13 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 09:59:34 - INFO - 
+Scores: [0.43500858545303345, 0.3432982563972473]
+2025-03-11 09:59:34 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 09:59:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:01:33 - INFO - 
+Scores: [0.5366179347038269, 0.43290334939956665]
+2025-03-11 10:01:33 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:01:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:03:09 - INFO - 
+Scores: [0.4338887929916382, 0.1842656433582306]
+2025-03-11 10:03:09 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:03:11 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:04:15 - INFO - 
+Scores: [0.33250874280929565, 0.48721951246261597]
+2025-03-11 10:04:15 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:04:17 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:05:56 - INFO - 
+Scores: [0.4151868224143982, 0.3623555302619934]
+2025-03-11 10:05:56 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:05:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:07:49 - INFO - 
+Scores: [0.5185466408729553, 0.44949591159820557]
+2025-03-11 10:07:49 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:07:51 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:09:06 - INFO - 
+Scores: [0.24025462567806244, 0.3531438708305359]
+2025-03-11 10:09:06 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:09:08 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:10:29 - INFO - 
+Scores: [0.3908788859844208, 0.38755983114242554]
+2025-03-11 10:10:29 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:10:32 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:12:50 - INFO - 
+Scores: [0.303629994392395, 0.3968111276626587]
+2025-03-11 10:12:50 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:12:52 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:14:52 - INFO - 
+Scores: [0.3188488483428955, 0.4852482080459595]
+2025-03-11 10:14:52 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:14:54 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:16:13 - INFO - 
+Scores: [0.5000147223472595, 0.3840365409851074]
+2025-03-11 10:16:13 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:16:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:17:48 - INFO - 
+Scores: [0.421877384185791, 0.3918943405151367]
+2025-03-11 10:17:48 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:17:51 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:19:53 - INFO - 
+Scores: [0.4739440083503723, 0.37171393632888794]
+2025-03-11 10:19:53 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:19:57 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:21:12 - INFO - 
+Scores: [0.17853960394859314, 0.48067528009414673]
+2025-03-11 10:21:13 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:21:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:22:28 - INFO - 
+Scores: [0.3766651749610901, 0.5426365733146667]
+2025-03-11 10:22:28 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:22:30 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:23:54 - INFO - 
+Scores: [0.44928431510925293, 0.33281368017196655]
+2025-03-11 10:23:55 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:23:57 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:26:02 - INFO - 
+Scores: [0.27229201793670654, 0.4999021291732788]
+2025-03-11 10:26:02 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:26:04 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:27:33 - INFO - 
+Scores: [0.44838476181030273, 0.45617079734802246]
+2025-03-11 10:27:33 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:27:35 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:28:58 - INFO - 
+Scores: [0.4037209153175354, 0.4893076419830322]
+2025-03-11 10:28:58 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:29:00 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:31:11 - INFO - 
+Scores: [0.5421580076217651, 0.449871301651001]
+2025-03-11 10:31:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:31:16 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:32:53 - INFO - 
+Scores: [0.5014590620994568, 0.326327919960022]
+2025-03-11 10:32:53 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:32:55 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:34:21 - INFO - 
+Scores: [0.40884268283843994, 0.36235183477401733]
+2025-03-11 10:34:21 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:34:23 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:36:05 - INFO - 
+Scores: [0.32677847146987915, 0.408086359500885]
+2025-03-11 10:36:05 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:36:08 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:37:11 - INFO - 
+Scores: [0.37039172649383545, 0.38347142934799194]
+2025-03-11 10:37:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:37:19 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:39:27 - INFO - 
+Scores: [0.5306270718574524, 0.33251750469207764]
+2025-03-11 10:39:27 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:39:29 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:40:58 - INFO - 
+Scores: [0.31815198063850403, 0.3807438015937805]
+2025-03-11 10:40:58 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:41:03 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:43:01 - INFO - 
+Scores: [0.3587532043457031, 0.4133076071739197]
+2025-03-11 10:43:02 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:43:05 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:44:25 - INFO - 
+Scores: [0.40365391969680786, 0.39293986558914185]
+2025-03-11 10:44:25 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:44:27 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:44:41 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E4EB35DC70>: Failed to resolve 'us.i.posthog.com' ([Errno 11002] getaddrinfo failed)")': /batch/
+2025-03-11 10:44:41 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E746A70260>: Failed to resolve 'us.i.posthog.com' ([Errno 11001] getaddrinfo failed)")': /batch/
+2025-03-11 10:44:41 - INFO - Backing off send_request(...) for 0.0s (requests.exceptions.ConnectionError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E746A72510>: Failed to resolve 'us.i.posthog.com' ([Errno 11001] getaddrinfo failed)")))
+2025-03-11 10:44:41 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E746A73C80>: Failed to resolve 'us.i.posthog.com' ([Errno 11001] getaddrinfo failed)")': /batch/
+2025-03-11 10:44:41 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E746A72E70>: Failed to resolve 'us.i.posthog.com' ([Errno 11001] getaddrinfo failed)")': /batch/
+2025-03-11 10:44:41 - INFO - Backing off send_request(...) for 1.0s (requests.exceptions.ConnectionError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E746A711F0>: Failed to resolve 'us.i.posthog.com' ([Errno 11001] getaddrinfo failed)")))
+2025-03-11 10:44:42 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E746A72210>: Failed to resolve 'us.i.posthog.com' ([Errno 11001] getaddrinfo failed)")': /batch/
+2025-03-11 10:44:42 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E746A71B80>: Failed to resolve 'us.i.posthog.com' ([Errno 11001] getaddrinfo failed)")': /batch/
+2025-03-11 10:44:42 - INFO - Backing off send_request(...) for 2.3s (requests.exceptions.ConnectionError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E746A71EB0>: Failed to resolve 'us.i.posthog.com' ([Errno 11001] getaddrinfo failed)")))
+2025-03-11 10:44:44 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E3380ABF50>: Failed to resolve 'us.i.posthog.com' ([Errno 11002] getaddrinfo failed)")': /batch/
+2025-03-11 10:44:44 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E3380AB620>: Failed to resolve 'us.i.posthog.com' ([Errno 11002] getaddrinfo failed)")': /batch/
+2025-03-11 10:44:44 - ERROR - Giving up send_request(...) after 4 tries (requests.exceptions.ConnectionError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E3380A82C0>: Failed to resolve 'us.i.posthog.com' ([Errno 11002] getaddrinfo failed)")))
+2025-03-11 10:45:54 - INFO - 
+Scores: [0.4505356550216675, 0.4439297318458557]
+2025-03-11 10:45:54 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:45:56 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:47:40 - INFO - 
+Scores: [0.34638091921806335, 0.4324232339859009]
+2025-03-11 10:47:40 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:47:43 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:49:19 - INFO - 
+Scores: [0.43204641342163086, 0.3628098964691162]
+2025-03-11 10:49:19 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:49:21 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:50:44 - INFO - 
+Scores: [0.5171763300895691, 0.28383171558380127]
+2025-03-11 10:50:44 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:50:47 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:53:35 - INFO - 
+Scores: [0.4488048553466797, 0.4146553874015808]
+2025-03-11 10:53:35 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:53:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:54:50 - INFO - 
+Scores: [0.07669033110141754, 0.394553542137146]
+2025-03-11 10:54:50 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:54:53 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:55:51 - INFO - 
+Scores: [0.1263987421989441, 0.4309135675430298]
+2025-03-11 10:55:51 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:55:53 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:57:17 - INFO - 
+Scores: [0.4715869426727295, 0.4297044277191162]
+2025-03-11 10:57:17 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:57:20 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 10:59:25 - INFO - 
+Scores: [0.21947363018989563, 0.3883522152900696]
+2025-03-11 10:59:25 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 10:59:28 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:01:21 - INFO - 
+Scores: [0.3230695128440857, 0.5186665058135986]
+2025-03-11 11:01:21 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:01:23 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:03:12 - INFO - 
+Scores: [0.4812074303627014, 0.3536435067653656]
+2025-03-11 11:03:12 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:03:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:04:50 - INFO - 
+Scores: [0.46478497982025146, 0.42516493797302246]
+2025-03-11 11:04:50 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:04:53 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:06:38 - INFO - 
+Scores: [0.46849310398101807, 0.3083692193031311]
+2025-03-11 11:06:38 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:06:41 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:08:31 - INFO - 
+Scores: [0.26223447918891907, 0.4176154136657715]
+2025-03-11 11:08:31 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:08:34 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:10:33 - INFO - 
+Scores: [0.4285596013069153, 0.504883348941803]
+2025-03-11 11:10:33 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:10:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:12:12 - INFO - 
+Scores: [0.49460166692733765, 0.3996015787124634]
+2025-03-11 11:12:12 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:12:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:13:31 - INFO - 
+Scores: [0.3102906346321106, 0.521832287311554]
+2025-03-11 11:13:31 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:13:33 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:15:14 - INFO - 
+Scores: [0.47208237648010254, 0.3911933898925781]
+2025-03-11 11:15:14 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:15:17 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:17:10 - INFO - 
+Scores: [0.4479519724845886, 0.4003170132637024]
+2025-03-11 11:17:10 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:17:12 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:18:49 - INFO - 
+Scores: [0.1411150097846985, 0.5150567889213562]
+2025-03-11 11:18:49 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:18:52 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:20:40 - INFO - 
+Scores: [0.48982733488082886, 0.23401565849781036]
+2025-03-11 11:20:40 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:20:42 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:23:09 - INFO - 
+Scores: [0.5439707040786743, 0.39108407497406006]
+2025-03-11 11:23:09 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:23:12 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:24:35 - INFO - 
+Scores: [0.37523049116134644, 0.25378939509391785]
+2025-03-11 11:24:35 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:24:37 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:26:16 - INFO - 
+Scores: [0.42682963609695435, 0.45532792806625366]
+2025-03-11 11:26:16 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:26:18 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:27:43 - INFO - 
+Scores: [0.3831526041030884, 0.3675296902656555]
+2025-03-11 11:27:43 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:27:45 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:29:04 - INFO - 
+Scores: [0.37696772813796997, 0.41948527097702026]
+2025-03-11 11:29:04 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:29:06 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:30:33 - INFO - 
+Scores: [0.4324638843536377, 0.48838889598846436]
+2025-03-11 11:30:33 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:30:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:32:07 - INFO - 
+Scores: [0.4177601933479309, 0.2820347249507904]
+2025-03-11 11:32:07 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:32:09 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:33:50 - INFO - 
+Scores: [0.2592000365257263, 0.4046608805656433]
+2025-03-11 11:33:50 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:33:52 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:35:21 - INFO - 
+Scores: [0.4869495630264282, 0.4499817490577698]
+2025-03-11 11:35:21 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:35:24 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:36:47 - INFO - 
+Scores: [0.4293779730796814, 0.39254724979400635]
+2025-03-11 11:36:47 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:36:49 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:38:02 - INFO - 
+Scores: [0.5200963616371155, 0.46295690536499023]
+2025-03-11 11:38:02 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:38:04 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:40:00 - INFO - 
+Scores: [0.43285953998565674, 0.509289562702179]
+2025-03-11 11:40:00 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:40:03 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:41:27 - INFO - 
+Scores: [0.4348013997077942, 0.26489919424057007]
+2025-03-11 11:41:27 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:41:29 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:43:35 - INFO - 
+Scores: [0.473077654838562, 0.5289151072502136]
+2025-03-11 11:43:35 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:43:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:45:16 - INFO - 
+Scores: [0.26375189423561096, 0.5168907642364502]
+2025-03-11 11:45:16 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:45:18 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:47:01 - INFO - 
+Scores: [0.48887211084365845, 0.4149649143218994]
+2025-03-11 11:47:01 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:47:03 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:48:40 - INFO - 
+Scores: [0.40040522813796997, 0.3327562212944031]
+2025-03-11 11:48:40 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:48:42 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:50:47 - INFO - 
+Scores: [0.37696772813796997, 0.4192919135093689]
+2025-03-11 11:50:48 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:50:53 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:52:43 - INFO - 
+Scores: [0.4413250684738159, 0.38480067253112793]
+2025-03-11 11:52:43 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:52:45 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:54:17 - INFO - 
+Scores: [0.477131724357605, 0.4316459894180298]
+2025-03-11 11:54:18 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:54:20 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:55:46 - INFO - 
+Scores: [0.3437589406967163, 0.45789140462875366]
+2025-03-11 11:55:46 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:55:48 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:57:18 - INFO - 
+Scores: [0.36205482482910156, 0.4166206121444702]
+2025-03-11 11:57:18 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:57:20 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 11:59:20 - INFO - 
+Scores: [0.40902066230773926, 0.47791004180908203]
+2025-03-11 11:59:20 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 11:59:24 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:01:03 - INFO - 
+Scores: [0.4686092734336853, 0.41486573219299316]
+2025-03-11 12:01:03 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:01:06 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:02:27 - INFO - 
+Scores: [0.13866442441940308, 0.38067445158958435]
+2025-03-11 12:02:27 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:02:30 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:04:12 - INFO - 
+Scores: [0.49460166692733765, 0.4732813835144043]
+2025-03-11 12:04:12 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:04:14 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:05:21 - INFO - 
+Scores: [0.24025462567806244, 0.4656338691711426]
+2025-03-11 12:05:21 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:05:23 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:06:43 - INFO - 
+Scores: [0.43694067001342773, 0.4175308346748352]
+2025-03-11 12:06:43 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:06:45 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:08:06 - INFO - 
+Scores: [0.4404304027557373, 0.4612680673599243]
+2025-03-11 12:08:07 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:08:09 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:09:50 - INFO - 
+Scores: [0.41446125507354736, 0.25378939509391785]
+2025-03-11 12:09:50 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:09:56 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:11:46 - INFO - 
+Scores: [0.4484267830848694, 0.4280164837837219]
+2025-03-11 12:11:46 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:11:49 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:13:17 - INFO - 
+Scores: [0.49692970514297485, 0.3484523892402649]
+2025-03-11 12:13:17 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:13:19 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:14:36 - INFO - 
+Scores: [0.5585095286369324, 0.5172038674354553]
+2025-03-11 12:14:36 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:14:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:16:07 - INFO - 
+Scores: [0.4005626440048218, 0.3546169102191925]
+2025-03-11 12:16:07 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:16:17 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:18:36 - INFO - 
+Scores: [0.3894394636154175, 0.18578742444515228]
+2025-03-11 12:18:36 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:18:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:19:55 - INFO - 
+Scores: [0.3810550570487976, 0.4159572124481201]
+2025-03-11 12:19:55 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:19:58 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:21:57 - INFO - 
+Scores: [0.513938307762146, 0.4870103597640991]
+2025-03-11 12:21:57 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:22:00 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:23:17 - INFO - 
+Scores: [0.486181378364563, 0.4697456955909729]
+2025-03-11 12:23:17 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:23:19 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:24:50 - INFO - 
+Scores: [0.4932788014411926, 0.3839741051197052]
+2025-03-11 12:24:50 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:24:52 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:26:43 - INFO - 
+Scores: [0.37695950269699097, 0.4694790244102478]
+2025-03-11 12:26:44 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:26:46 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:28:22 - INFO - 
+Scores: [0.41901320219039917, 0.4567549228668213]
+2025-03-11 12:28:22 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:28:24 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:29:54 - INFO - 
+Scores: [0.47426897287368774, 0.35798436403274536]
+2025-03-11 12:29:54 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:29:56 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:30:54 - INFO - 
+Scores: [0.44975119829177856, 0.359393835067749]
+2025-03-11 12:30:54 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:30:56 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:32:44 - INFO - 
+Scores: [0.39644110202789307, 0.46658915281295776]
+2025-03-11 12:32:44 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:32:46 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:34:34 - INFO - 
+Scores: [0.4242745637893677, 0.5054198503494263]
+2025-03-11 12:34:34 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:34:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:36:52 - INFO - 
+Scores: [0.43145233392715454, 0.423064649105072]
+2025-03-11 12:36:52 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:36:54 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:38:19 - INFO - 
+Scores: [0.4444923400878906, 0.43775826692581177]
+2025-03-11 12:38:19 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:38:23 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:39:53 - INFO - 
+Scores: [0.4278256297111511, 0.45662420988082886]
+2025-03-11 12:39:53 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:39:55 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:41:10 - INFO - 
+Scores: [0.4184117913246155, 0.35339266061782837]
+2025-03-11 12:41:10 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:41:12 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:43:37 - INFO - 
+Scores: [0.3134279251098633, 0.5381503105163574]
+2025-03-11 12:43:37 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:43:40 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:45:42 - INFO - 
+Scores: [0.42927467823028564, 0.26764485239982605]
+2025-03-11 12:45:42 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:45:45 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:47:34 - INFO - 
+Scores: [0.4845621585845947, 0.29303842782974243]
+2025-03-11 12:47:34 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:47:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:48:51 - INFO - 
+Scores: [0.4199450612068176, 0.3679012358188629]
+2025-03-11 12:48:51 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:48:54 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:50:47 - INFO - 
+Scores: [0.4111432433128357, 0.4066084027290344]
+2025-03-11 12:50:47 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:50:49 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:51:56 - INFO - 
+Scores: [0.17327621579170227, 0.4585035443305969]
+2025-03-11 12:51:56 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:51:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:53:54 - INFO - 
+Scores: [0.42586737871170044, 0.5094797611236572]
+2025-03-11 12:53:54 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:53:56 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:55:24 - INFO - 
+Scores: [0.39842379093170166, 0.568673312664032]
+2025-03-11 12:55:24 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:55:27 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:56:35 - INFO - 
+Scores: [0.42984652519226074, 0.5285242199897766]
+2025-03-11 12:56:35 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:56:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 12:58:35 - INFO - 
+Scores: [0.3907817602157593, 0.37360846996307373]
+2025-03-11 12:58:35 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 12:58:38 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:00:56 - INFO - 
+Scores: [0.42275214195251465, 0.511789858341217]
+2025-03-11 13:00:56 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:00:59 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:02:37 - INFO - 
+Scores: [0.39949387311935425, 0.3847365379333496]
+2025-03-11 13:02:38 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:02:40 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:04:34 - INFO - 
+Scores: [0.46919387578964233, 0.3376351594924927]
+2025-03-11 13:04:34 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:04:37 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:06:00 - INFO - 
+Scores: [0.35160207748413086, 0.24001044034957886]
+2025-03-11 13:06:00 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:06:07 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:08:08 - INFO - 
+Scores: [0.4046604633331299, 0.42519843578338623]
+2025-03-11 13:08:08 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:08:11 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:09:42 - INFO - 
+Scores: [0.43473660945892334, 0.44693905115127563]
+2025-03-11 13:09:42 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:09:44 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:11:22 - INFO - 
+Scores: [0.4390025734901428, 0.3978922963142395]
+2025-03-11 13:11:22 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:11:25 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:13:03 - INFO - 
+Scores: [0.5148396492004395, 0.49265921115875244]
+2025-03-11 13:13:03 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:13:06 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:15:04 - INFO - 
+Scores: [0.43998003005981445, 0.46820753812789917]
+2025-03-11 13:15:04 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:15:17 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:17:34 - INFO - 
+Scores: [0.5347440242767334, 0.5314253568649292]
+2025-03-11 13:17:34 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:17:37 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:19:46 - INFO - 
+Scores: [0.5598759651184082, 0.5623801350593567]
+2025-03-11 13:19:46 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:19:48 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:22:02 - INFO - 
+Scores: [0.6027053594589233, 0.5331375002861023]
+2025-03-11 13:22:02 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:22:05 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:24:11 - INFO - 
+Scores: [0.527793288230896, 0.5642204880714417]
+2025-03-11 13:24:11 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:24:14 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:26:17 - INFO - 
+Scores: [0.4657247066497803, 0.5055350661277771]
+2025-03-11 13:26:17 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:26:20 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:28:24 - INFO - 
+Scores: [0.5188767910003662, 0.5237146615982056]
+2025-03-11 13:28:24 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:28:27 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:30:31 - INFO - 
+Scores: [0.4949261546134949, 0.5629810094833374]
+2025-03-11 13:30:31 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:30:34 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:33:05 - INFO - 
+Scores: [0.3740781545639038, 0.49470090866088867]
+2025-03-11 13:33:06 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:33:09 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:35:25 - INFO - 
+Scores: [0.5134692192077637, 0.5349138379096985]
+2025-03-11 13:35:25 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:35:27 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:37:15 - INFO - 
+Scores: [0.5478525161743164, 0.5081079602241516]
+2025-03-11 13:37:15 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:37:18 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:39:20 - INFO - 
+Scores: [0.5303493738174438, 0.5276915431022644]
+2025-03-11 13:39:21 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:39:23 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:41:46 - INFO - 
+Scores: [0.4352841377258301, 0.5612066388130188]
+2025-03-11 13:41:46 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:41:49 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:44:12 - INFO - 
+Scores: [0.44470661878585815, 0.4545406103134155]
+2025-03-11 13:44:12 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:44:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:46:42 - INFO - 
+Scores: [0.5017293095588684, 0.6022791266441345]
+2025-03-11 13:46:42 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:46:44 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:48:42 - INFO - 
+Scores: [0.4478412866592407, 0.5193086862564087]
+2025-03-11 13:48:42 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:48:47 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:50:20 - INFO - 
+Scores: [0.49081897735595703, 0.5346314907073975]
+2025-03-11 13:50:20 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:50:23 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:52:51 - INFO - 
+Scores: [0.5398876070976257, 0.5308946371078491]
+2025-03-11 13:52:51 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:52:53 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:54:50 - INFO - 
+Scores: [0.5553073287010193, 0.5481541752815247]
+2025-03-11 13:54:50 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:54:52 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:57:13 - INFO - 
+Scores: [0.45702898502349854, 0.5330421328544617]
+2025-03-11 13:57:13 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:57:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 13:59:12 - INFO - 
+Scores: [0.5488653182983398, 0.5263420343399048]
+2025-03-11 13:59:12 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 13:59:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:00:33 - INFO - 
+Scores: [0.17960886657238007, 0.4718955159187317]
+2025-03-11 14:00:33 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:00:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:02:42 - INFO - 
+Scores: [0.5261425971984863, 0.508216142654419]
+2025-03-11 14:02:42 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:02:45 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:04:34 - INFO - 
+Scores: [0.5262446403503418, 0.524968147277832]
+2025-03-11 14:04:34 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:04:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:07:06 - INFO - 
+Scores: [0.5395734310150146, 0.5576682090759277]
+2025-03-11 14:07:06 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:07:10 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:09:15 - INFO - 
+Scores: [0.5312240719795227, 0.5143531560897827]
+2025-03-11 14:09:15 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:09:18 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:11:33 - INFO - 
+Scores: [0.40861523151397705, 0.582627534866333]
+2025-03-11 14:11:34 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:11:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:14:20 - INFO - 
+Scores: [0.4334256649017334, 0.4835096001625061]
+2025-03-11 14:14:20 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:14:22 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:16:04 - INFO - 
+Scores: [0.4665219187736511, 0.5409479737281799]
+2025-03-11 14:16:04 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:16:06 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:18:16 - INFO - 
+Scores: [0.5796750783920288, 0.4792788028717041]
+2025-03-11 14:18:16 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:18:22 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:20:10 - INFO - 
+Scores: [0.5342189073562622, 0.561089038848877]
+2025-03-11 14:20:10 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:20:12 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:22:29 - INFO - 
+Scores: [0.5988799333572388, 0.4542742967605591]
+2025-03-11 14:22:29 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:22:32 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:24:23 - INFO - 
+Scores: [0.5386365056037903, 0.4418793320655823]
+2025-03-11 14:24:23 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:24:26 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:26:50 - INFO - 
+Scores: [0.5592014193534851, 0.5341162085533142]
+2025-03-11 14:26:50 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:26:55 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:29:02 - INFO - 
+Scores: [0.4824520945549011, 0.5268083810806274]
+2025-03-11 14:29:02 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:29:04 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:31:06 - INFO - 
+Scores: [0.49357283115386963, 0.5738770961761475]
+2025-03-11 14:31:06 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:31:08 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:32:43 - INFO - 
+Scores: [0.5742906928062439, 0.5265664458274841]
+2025-03-11 14:32:43 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:32:45 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:35:12 - INFO - 
+Scores: [0.5633514523506165, 0.4744405746459961]
+2025-03-11 14:35:13 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:35:15 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:37:35 - INFO - 
+Scores: [0.5940480828285217, 0.5112929940223694]
+2025-03-11 14:37:35 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:37:37 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:39:34 - INFO - 
+Scores: [0.6089978814125061, 0.4756399989128113]
+2025-03-11 14:39:34 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:39:36 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2025-03-11 14:42:06 - INFO - 
+Scores: [0.44099295139312744, 0.5217112302780151]
+2025-03-11 14:42:06 - INFO - Load pretrained SentenceTransformer: pritamdeka/S-PubMedBert-MS-MARCO
+2025-03-11 14:42:08 - INFO - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
