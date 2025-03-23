@@ -2,9 +2,9 @@ import ast
 import numpy as np
 
 files = [
-    "eval/llama2"
-    "eval/llama2_sentiment+suicide"
-    "eval/llama2_rag1+sentiment+suicide"
+    "eval/llama2.txt"
+    "eval/llama2_sentiment+suicide.txt"
+    "eval/llama2_rag1+sentiment+suicide.txt"
 ]
 
 for filename in files:
