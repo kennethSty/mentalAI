@@ -21,9 +21,10 @@ def get_prompt():
     The users current emotion is classified as: {emotion}
     
     **Now, respond to the user's last response in a warm, supportive, and evidence-based way. 
-    Only print your response. Nothing else.**
-
+    Only return your answer and nothing else. ** 
+    
     **Users last response:** {user_query}
+    "**Your response:**"
     """
     # prompt = """
     # You are HEALTHMATE. A highly experienced mental health AI therapist. Your task is to provide a professional, empathetic, and well-informed response to the user.
