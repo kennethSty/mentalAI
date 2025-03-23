@@ -106,7 +106,7 @@ Follow the latest instructions [here](https://python.langchain.com/docs/integrat
 
 
 ### **5. Setup data and models**  
-Place the folders available on [this google drive for the models](https://drive.google.com/drive/folders/13wcdsFVJpqAFZ9FG5u0nR--RTGCrlzU6?dmr=1&ec=wgc-drive-globalnav-goto) and this google drive for the data(TODO Ole: add the link to the data folder that includes the full chromastore)in the root directory. If your project root (like ours is called mental AI, place the folders within the mentalAI folder).
+Place the folders available on [this google drive for the models](https://drive.google.com/drive/folders/13wcdsFVJpqAFZ9FG5u0nR--RTGCrlzU6?dmr=1&ec=wgc-drive-globalnav-goto) and this [google drive for the data](https://drive.google.com/drive/folders/1KBBUywWFYxgJqKGZlEReGMRmCbmwJR57?usp=drive_link) in the root directory. If your project root (like ours is called mental AI, place the folders within the mentalAI folder).
 If links to the data folders are incomplete or outdated please contact [Ole Plechinger](mailto:ole.plechinger@protonmail.com).
 
 ### **6. Chatting with the bot** 
@@ -135,7 +135,7 @@ If you want to reproduce the finetuning process, go to `src/_4_model_finetuning/
 Make sure a finetuned model checkpoint exists in the models/finetuned directory. For the exact reproduction of our results, use `models/finetuned/gpt2_checkpoints/checkpoint_step_8000.pth`. Then, go to `src/_4_model_finetuning/finetuning.py` and execute the script.
 
 ### **6. Reproduce system evaluation (optional)**
-TODO Ole: Add usage of the evaluation script
+If you want to reproduce the evaluation of answer quality, execute `python -m src._5_model_evaluation.bleurt`, to show the results add the path of your logs to src/_5_model_evaluation/eval.py execute `python -m src._5_model_evaluation.eval`
 
 
 ## Disclaimer
