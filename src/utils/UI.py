@@ -9,12 +9,12 @@ INDENTATION = "      "
 LINE = INDENTATION + SEPARATOR
 FRAME_LINE = LINE + NEW_LINE
 LOGO = (f"{INDENTATION}       |\n"
-        f"{INDENTATION}     \\\|//\n"
-        f"{INDENTATION}     \\\|//\n"
-        f"{INDENTATION}    \\\\\|///\n"
-        f"{INDENTATION}    \\\\\|///\n"
-        f"{INDENTATION}     \\\|//\n"
-        f"{INDENTATION}      \|/\n"
+        f"{INDENTATION}     \\\\|//\n"
+        f"{INDENTATION}     \\\\|//\n"
+        f"{INDENTATION}    \\\\\\|///\n"
+        f"{INDENTATION}    \\\\\\|///\n"
+        f"{INDENTATION}     \\\\|//\n"
+        f"{INDENTATION}      \\|/\n"
         f"{INDENTATION}       |\n")
 
 class PrettyStdOutCallbackHandler(StreamingStdOutCallbackHandler):

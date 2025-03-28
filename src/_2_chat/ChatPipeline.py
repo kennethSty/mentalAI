@@ -15,6 +15,9 @@ from src.utils.UI import PrettyStdOutCallbackHandler
 from src._5_model_evaluation.evaluation_utils import load_finetuned_model
 from src.utils.gpu_utils import DeviceManager
 
+import jsonpickle
+import requests
+
 
 class ChatPipeline:
     def __init__(
@@ -33,11 +36,23 @@ class ChatPipeline:
             collection_embed_dict=collection_embed_dict
         )
         self.suicide_classifier = self.__init_suicide_classifier(model_name = "gpt2")
-        self.emotion_classifier = pipeline("text-classification", model="tabularisai/multilingual-sentiment-analysis")
+        self.sentiment_classifier = pipeline("text-classification", model="tabularisai/multilingual-sentiment-analysis")
+
+    def get_emotion(self, text: str) -> str:
+
+        url_emoberta = "http://127.0.0.1:10006/"
+        data = {"text": text}
+
+        data = jsonpickle.encode(data)
+        response = requests.post(url_emoberta, json=data)
+        response = jsonpickle.decode(response.text)
+
+        return response
 
     def get_answer(self, question: str):
         suicide_risk = self.suicide_classifier.classify(question)
-        emotion = self.emotion_classifier(question[:512])
+        #sentiment = self.sentiment_classifier(question[:512])
+        emotion = self.get_emotion(question)
         print(f"\nEmotion: {emotion}")
 
         top_pubmed_docs = self.collection_dict["pubmed_collection"]\
@@ -51,6 +66,7 @@ class ChatPipeline:
                     "top_k_abstracts": top_k_abstracts,
                     "top_k_conversations": top_k_conversations,
                     "suicide_risk": suicide_risk,
+                    "emotion": emotion,
                     "user_query": question
             })
         return answer
