@@ -80,7 +80,7 @@ Your question: But even if I try to relax with breating techniques, I get stress
   - Conducted **system evaluations**.
 
 - **Korhan Derin**  
-  - Assisted with **scaling** and **evaluation**.
+  - Assisted with **scaling**, **emotion/sentiment classifier** and **system evaluation**.
   - Performed **data analysis**.
 
 ## **Installation**  
