@@ -72,6 +72,7 @@ Your question: But even if I try to relax with breating techniques, I get stress
   - Developed the overall **RAG System** from data extraction, embedding, document retrieval and answer generation 
   - Curated **datasets A, B, C** and embedded subsets.  
   - Built **suicide risk prediction classifier** by reverse engineering and finetuning **GPT-2** from scratch.
+  - Created CLI UI
 
 - **Ole Plechinger**  
   - Added **emotion/sentiment classifier** to the pipeline
