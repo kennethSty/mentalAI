@@ -50,7 +50,6 @@ def evaluate_model_on_testset(model: nn.Module, test_loader: DataLoader, device:
     np.save_text("logs/bleurt_eval_scores.txt", scores)
 
 
-
 if __name__ == "__main__":
     device = DeviceManager().get_device()
     assert device == "cuda" or device == "mps", "Evaluation has to be done on GPU"
