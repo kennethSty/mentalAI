@@ -13,20 +13,20 @@ def merge_counsel_datasets(paths_to_human_datasets: List[str], paths_to_syntheti
 
     train_df = pd.concat([human_train_df, synthetic_train_df])
     test_df = pd.concat([human_test_df, synthetic_test_df])
-    train_df.to_csv("../../data/02_train_test_splits/train/counsel_conversations_train.csv", index=False)
-    test_df.to_csv("../../data/02_train_test_splits/test/counsel_conversations_test.csv", index=False)
+    train_df.to_csv("data/02_train_test_splits/train/counsel_conversations_train.csv", index=False)
+    test_df.to_csv("data/02_train_test_splits/test/counsel_conversations_test.csv", index=False)
 
 if __name__ == "__main__":
 
     paths_to_human_datasets = [
-        "../../data/01_preprocessed/counsel_chat_preproc.csv",
-        "../../data/01_preprocessed/mental_conv_preproc.csv",
-        "../../data/01_preprocessed/mental_faq_preproc.csv",
-        "../../data/01_preprocessed/pair_data_preproc.csv",
+        "data/01_preprocessed/counsel_chat_preproc.csv",
+        "data/01_preprocessed/mental_conv_preproc.csv",
+        "data/01_preprocessed/mental_faq_preproc.csv",
+        "data/01_preprocessed/pair_data_preproc.csv",
     ]
 
     paths_to_synthetic_datasets = [
-        "../../data/01_preprocessed/synthetic_conversations_preproc.csv"
+        "data/01_preprocessed/synthetic_conversations_preproc.csv"
     ]
 
     merge_counsel_datasets(paths_to_human_datasets, paths_to_synthetic_datasets)

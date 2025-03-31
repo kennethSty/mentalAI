@@ -4,7 +4,7 @@ from ast import literal_eval
 import re
 
 def preproc_counsel_chat():
-    df = pd.read_csv("../../data/00_raw/counsel_chat.csv")
+    df = pd.read_csv("data/00_raw/counsel_chat.csv")
     df = df[["questionText", "answerText"]].rename(
         columns={"questionText": "question(s)", "answerText": "answer(s)"}
     )
@@ -13,11 +13,11 @@ def preproc_counsel_chat():
     )
     df = df.apply(lambda col: col.map(lambda x: x.replace("\xa0", " ") if isinstance(x, str) else x))
 
-    df.to_csv("../../data/01_preprocessed/counsel_chat_preproc.csv", index=False)
+    df.to_csv("data/01_preprocessed/counsel_chat_preproc.csv", index=False)
 
 def preproc_mental_faq():
-    with open("../../data/00_raw/mental_faq.csv", encoding="utf-8") as input_csv, \
-            open("../../data/01_preprocessed/mental_faq_preproc.csv", "w", encoding="utf-8") as output_csv:
+    with open("data/00_raw/mental_faq.csv", encoding="utf-8") as input_csv, \
+            open("data/01_preprocessed/mental_faq_preproc.csv", "w", encoding="utf-8") as output_csv:
 
         reader = DictReader(input_csv)
         writer = DictWriter(output_csv, fieldnames=["question(s)", "answer(s)", "question_answer_pair(s)"])
@@ -64,7 +64,7 @@ def preproc_mental_faq():
 
 
 def preproc_pair_data():
-    df = pd.read_csv("../../data/00_raw/pair_data.csv")
+    df = pd.read_csv("data/00_raw/pair_data.csv")
     df = df[["prompt", "lq5"]].rename(
         columns={"prompt": "question(s)", "lq5": "answer(s)"}
     )
@@ -73,10 +73,10 @@ def preproc_pair_data():
     )
     df = df.apply(lambda col: col.map(lambda x: x.replace("\xa0", " ") if isinstance(x, str) else x))
     df = df.replace(r"\\'", "'", regex=True)
-    df.to_csv("../../data/01_preprocessed/pair_data_preproc.csv", index=False)
+    df.to_csv("data/01_preprocessed/pair_data_preproc.csv", index=False)
 
 def preproc_mental_conv():
-    df = pd.read_csv("../../data/00_raw/mental_health_conv.csv")
+    df = pd.read_csv("data/00_raw/mental_health_conv.csv")
     df = df.rename(
         columns={"Context": "question(s)", "Response": "answer(s)"}
     )
@@ -84,11 +84,11 @@ def preproc_mental_conv():
         lambda row: f'<Patient>: {row["question(s)"]} \n <Therapist>: {row["answer(s)"]}', axis=1
     )
     df = df.apply(lambda col: col.map(lambda x: x.replace("\xa0", " ") if isinstance(x, str) else x))
-    df.to_csv("../../data/01_preprocessed/mental_conv_preproc.csv", index=False)
+    df.to_csv("data/01_preprocessed/mental_conv_preproc.csv", index=False)
 
 def preproc_synth_convs():
-    with open("../../data/00_raw/synthetic_conversations.csv", encoding="utf-8") as input_csv,\
-        open("../../data/01_preprocessed/synthetic_conversations_preproc.csv", "w", encoding="utf-8") as output_csv:
+    with open("data/00_raw/synthetic_conversations.csv", encoding="utf-8") as input_csv,\
+        open("data/01_preprocessed/synthetic_conversations_preproc.csv", "w", encoding="utf-8") as output_csv:
 
         reader = DictReader(input_csv)
         writer = DictWriter(output_csv, fieldnames=["question(s)", "answer(s)", "question_answer_pair(s)"])

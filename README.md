@@ -1,5 +1,5 @@
 # MentalAI 
-![Header](plots/header.png)  
+![Header](plots/header.png)
 
 MentalAI is a retrieval-augmented system for mental health support with fine-tuned suicide prediction. It leverages **llama.cpp**, reverse engineered **GPT2** and **LangChain** to provide AI-assisted conversations based on retrieved contextual information. The overall idea is to combine clinical expert knowledge with empathy and therapeutical experience by combining finetuned emotion and suicidality classifiers with academic, therapeutic and conversational knowledge documents.  
 
@@ -92,51 +92,52 @@ cd mentalAI
 
 ### **2. Create and activate a Conda environment**  
 ```bash
-conda create --name mentalai_env python=3.10  
-conda activate mentalai_env  
+conda create --name mentalai_env python=3.10
+conda activate mentalai_env
 ```
 
 ### **3. Install dependencies**  
 ```bash
-pip install -r requirements.txt  
+pip install -r requirements.txt
 ```
 
 ### **4. Llama.cpp GPU installation:**  
 Follow the latest instructions [here](https://python.langchain.com/docs/integrations/llms/llamacpp/#installation). 
-
 
 ### **5. Setup data and models**  
 Place the folders available on [this google drive for the models](https://drive.google.com/drive/folders/13wcdsFVJpqAFZ9FG5u0nR--RTGCrlzU6?dmr=1&ec=wgc-drive-globalnav-goto) and this [google drive for the data](https://drive.google.com/drive/folders/1KBBUywWFYxgJqKGZlEReGMRmCbmwJR57?usp=drive_link) in the root directory. If your project root (like ours is called mental AI, place the folders within the mentalAI folder).
 If links to the data folders are incomplete or outdated please contact [Ole Plechinger](mailto:ole.plechinger@protonmail.com).
 
 ### **6. Chatting with the bot** 
-Go to `src/_2_chat/chat.py`, execute the script and chat away! 
+Just run the module in `src/_2_chat/chat.py` and chat away!
 
 ```bash
-python chat.py
+python -m src._2_chat.chat
 ```
 
 ## Optional reproduction of our set up
 
 ### **1. Rerun data extraction (optional)**
-If you want to reproduce the data extraction process, go to `src/_0_data_preparation/extract_pubmed.py` and execute the script. 
-Similarly run the `collect_counsel_datasets.py` and the `merge_counsel_datasets.py` files
+If you want to reproduce the data extraction process, run `python -m src._0_data_preparation.extract_pubmed`.
+Similarly you can run the modules `collect_counsel_datasets` and `merge_counsel_datasets`
 
 ### **2. Rerun data embedding (optional)**
-If you want to reproduce the embedding process, go to `src/_1_chroma_preparation/doc2vec.py` and execute the script.
+If you want to reproduce the embedding process, run `python -m src._1_chroma_preparation.doc2vec`.
 
 ### **3. Rerun chroma upsert (optional)**
-If you want to reproduce the embedding process, go to `src/_1_chroma_preparation/vec2chroma.py` and execute the script.
+If you want to reproduce the embedding process, run `python -m src._1_chroma_preparation.vec2chroma`.
 
 ### **4. Rerun GPT2 finetuning (optional)**
-If you want to reproduce the finetuning process, go to `src/_4_model_finetuning/finetuning.py` and execute the script.
+If you want to reproduce the finetuning process, run `python -m src._4_model_finetuning.finetuning`.
 
 ### **5. Reproduce Finetuning evaluation GPT2 finetuning (optional)**
-Make sure a finetuned model checkpoint exists in the models/finetuned directory. For the exact reproduction of our results, use `models/finetuned/gpt2_checkpoints/checkpoint_step_8000.pth`. Then, go to `src/_4_model_finetuning/finetuning.py` and execute the script.
+Make sure a finetuned model checkpoint exists in the models/finetuned directory. For the exact reproduction of our results, use `models/finetuned/gpt2_checkpoints/checkpoint_step_8000.pth`. Then, run `python -m src._4_model_finetuning.finetuning`.
 
 ### **6. Reproduce system evaluation (optional)**
-If you want to reproduce the evaluation of answer quality, execute `python -m src._5_model_evaluation.bleurt`, to show the results add the path of your logs to src/_5_model_evaluation/eval.py execute `python -m src._5_model_evaluation.eval`
+If you want to reproduce the evaluation of answer quality, execute `python -m src._5_model_evaluation.bleurt`, the results are saved in `logs/`.
 
+## **7. Generate charts from report (optional)**
+If you want to reproduce the charts from the report, run `python -m src.analysis.analysis`.
 
 ## Disclaimer
 This project is intended for research and educational purposes. It is not a replacement for professional mental health services.

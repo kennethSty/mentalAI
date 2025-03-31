@@ -24668,3 +24668,7 @@
 2025-02-11 09:46:00,828 [INFO] - ** Year of last extraction: 2024
 2025-02-11 09:46:02,562 [INFO] - ** Year of last extraction: 2024
 2025-02-11 09:46:05,151 [INFO] - ** Year of last extraction: 2024
+2025-03-31 12:55:42,346 [INFO] - ------- Beginning to extract PubMed abstracts --------
+2025-03-31 12:55:42,346 [INFO] - Start date: 2024/01/01
+2025-03-31 12:55:42,346 [INFO] - End date: 2025/01/01
+2025-03-31 12:55:42,346 [INFO] - Query term: mental health

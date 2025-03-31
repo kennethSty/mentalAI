@@ -16,12 +16,12 @@ from src.utils.gpu_utils import DeviceManager
 def finetune_classification_head(model: nn.Module, tokenizer: Tokenizer, model_flag = "psychbert", accuracy_before_train = False):
 
     #setup paths
-    train_ds_path = Path(f"../../data/02_train_test_splits/train/{model_flag}/{model_flag}_suicide_train.csv")
-    val_ds_path = Path(f"../../data/02_train_test_splits/train/{model_flag}/{model_flag}_suicide_val.csv")
-    test_ds_path = Path(f"../../data/02_train_test_splits/test/{model_flag}/{model_flag}_suicide_test.csv")
-    losses_tracker_path = Path(f"../../logs/{model_flag}_finetuning_losses.csv")
-    acc_tracker_path = Path(f"../../logs/{model_flag}_finetuning_accs.csv")
-    finetuned_model_path = Path(f'../../models/finetuned/{model_flag}_classif_tuned.pth')
+    train_ds_path = Path(f"data/02_train_test_splits/train/{model_flag}/{model_flag}_suicide_train.csv")
+    val_ds_path = Path(f"data/02_train_test_splits/train/{model_flag}/{model_flag}_suicide_val.csv")
+    test_ds_path = Path(f"data/02_train_test_splits/test/{model_flag}/{model_flag}_suicide_test.csv")
+    losses_tracker_path = Path(f"logs/{model_flag}_finetuning_losses.csv")
+    acc_tracker_path = Path(f"logs/{model_flag}_finetuning_accs.csv")
+    finetuned_model_path = Path(f'models/finetuned/{model_flag}_classif_tuned.pth')
     check_and_create_directories(
         [train_ds_path,
         val_ds_path,

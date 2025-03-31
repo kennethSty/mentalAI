@@ -51,7 +51,7 @@ class ChatPipeline:
 
     def get_answer(self, question: str):
         suicide_risk = self.suicide_classifier.classify(question)
-        #sentiment = self.sentiment_classifier(question[:512])
+        sentiment = self.sentiment_classifier(question[:512])
         emotion = self.get_emotion(question)
         print(f"\nEmotion: {emotion}")
 

@@ -21,8 +21,8 @@ class DataExtractor:
                 chunk_size = 100,
                 start_date = '2024/01/01',
                 end_date = '2025/01/01',
-                save_path = "../../data/pubmed_abstracts.csv",
-                log_path = "../../logs/pubmed_extraction_log.txt"):
+                save_path = "data/pubmed_abstracts.csv",
+                log_path = "logs/pubmed_extraction_log.txt"):
         
         """
         Class encapsulating the logic of retrieving data from PubMed

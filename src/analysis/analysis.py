@@ -148,21 +148,19 @@ def eval_from_logs(files):
     plt.ylim(0.35, 0.55)
     plt.grid(color='#95a5a6', linestyle=':', axis='y', alpha=0.5)
 
-    # plt.bar("vanilla", means[0], width=width)
     plt.bar(1 + np.arange(2) - width/2, [means[1], means[3]], width=width, label="topk=0") # no rag
     plt.bar(1 + np.arange(2) + width/2, [means[2], means[4]], width=width, label="topk=1") # with rag
 
     baseline = plt.axhline(y=means[0],linewidth=1, color='r', label="baseline")
     plt.legend()
 
-    # plt.errorbar("vanilla",   means[0], yerr=errors[0], capsize=4, color='#555')
     plt.errorbar(1 - width/2, means[1], yerr=errors[1], capsize=4, color='#555')
     plt.errorbar(1 + width/2, means[2], yerr=errors[2], capsize=4, color='#555')
     plt.errorbar(2 - width/2, means[3], yerr=errors[3], capsize=4, color='#555')
     plt.errorbar(2 + width/2, means[4], yerr=errors[4], capsize=4, color='#555')
     
-    plt.ylabel("Bleurt Score")
-    plt.title("Mean Bleurt Scores")
+    plt.ylabel("BLEURT Score")
+    plt.title("Mean BLEURT Scores")
     plt.savefig("plots/mean_bleurt_scores.png", dpi=300, bbox_inches="tight")
     plt.close()
 
@@ -173,7 +171,7 @@ def eval_from_logs(files):
         axs[i].hist(vals, weights=np.ones(len(vals)) / len(vals), bins=n_bins)
 
     plt.gca().yaxis.set_major_formatter(PercentFormatter(1))
-    fig.suptitle("Distribution of Bleurt Scores")
+    fig.suptitle("Distribution of BLEURT Scores")
 
     axs[0].set_title("Baseline",      fontsize=8)
     axs[1].set_title("Sent.+ Topk=0", fontsize=8)
@@ -187,22 +185,22 @@ def eval_from_logs(files):
 
 
 if __name__ == "__main__":
-    # wordcloud(files=[
-    #     "data/00_raw/pubmed/pubmed_abstracts2019.csv",
-    #     "data/00_raw/pubmed/pubmed_abstracts2020.csv",
-    #     "data/00_raw/pubmed/pubmed_abstracts2021.csv",
-    #     "data/00_raw/pubmed/pubmed_abstracts2022.csv",
-    #     "data/00_raw/pubmed/pubmed_abstracts2023.csv",
-    #     "data/00_raw/pubmed/pubmed_abstracts20172018.csv",
-    # ], col_name="abstract", out="plots/wordcloud_pubmed.png")
+    wordcloud(files=[
+        "data/00_raw/pubmed/pubmed_abstracts2019.csv",
+        "data/00_raw/pubmed/pubmed_abstracts2020.csv",
+        "data/00_raw/pubmed/pubmed_abstracts2021.csv",
+        "data/00_raw/pubmed/pubmed_abstracts2022.csv",
+        "data/00_raw/pubmed/pubmed_abstracts2023.csv",
+        "data/00_raw/pubmed/pubmed_abstracts20172018.csv",
+    ], col_name="abstract", out="plots/wordcloud_pubmed.png")
 
-    # wordcloud(files=[
-    #     "data/02_train_test_splits/test/counsel_conversations_test.csv",
-    #     "data/02_train_test_splits/train/counsel_conversations_train.csv",
-    # ], col_name="question_answer_pair(s)", out="plots/wordcloud_conv.png")
+    wordcloud(files=[
+        "data/02_train_test_splits/test/counsel_conversations_test.csv",
+        "data/02_train_test_splits/train/counsel_conversations_train.csv",
+    ], col_name="question_answer_pair(s)", out="plots/wordcloud_conv.png")
 
-    # publication_dates()
-    # ratio_human_synthetic()
+    publication_dates()
+    ratio_human_synthetic()
     eval_from_logs(files=[
         "evals/llama2.txt",
         "evals/llama2_sentiment+suicide.txt",
